@@ -68,6 +68,8 @@ function initLoginForm() {
         title: role === 'architecture' ? 'Senior Partner Architect' : 'Senior Interior Designer'
       });
       window.STACKLY_STORE.setRole(role);
+      window.STACKLY_STORE.setArchTab('overview');
+      window.STACKLY_STORE.setIntTab('overview');
     }
 
     // Direct dashboard navigation based on selected role (no separate role selector page needed)

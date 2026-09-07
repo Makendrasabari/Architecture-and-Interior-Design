@@ -17,9 +17,14 @@ window.STACKLY_STORE = (function () {
         name: 'Alexander Wright',
         email: 'alexander.wright@stackly.com',
         title: 'Senior Partner Architect',
-        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80'
+        avatar: 'assets/images/avatar-alexander.webp'
       };
       localStorage.setItem(STORAGE_KEY_USER, JSON.stringify(defaultUser));
+    }
+    // If not authenticated, ensure previous dashboard active tabs are cleared
+    if (!isAuthenticated()) {
+      localStorage.removeItem(STORAGE_KEY_ARCH_TAB);
+      localStorage.removeItem(STORAGE_KEY_INT_TAB);
     }
   }
 
@@ -40,6 +45,9 @@ window.STACKLY_STORE = (function () {
 
   function login(user) {
     localStorage.setItem(STORAGE_KEY_AUTH, 'true');
+    // Always reset dashboard starting page to default overview on login
+    localStorage.setItem(STORAGE_KEY_ARCH_TAB, 'overview');
+    localStorage.setItem(STORAGE_KEY_INT_TAB, 'overview');
     if (user) {
       localStorage.setItem(STORAGE_KEY_USER, JSON.stringify(user));
     }
@@ -48,6 +56,12 @@ window.STACKLY_STORE = (function () {
   function logout(redirectUrl = 'login.html') {
     localStorage.removeItem(STORAGE_KEY_AUTH);
     localStorage.removeItem(STORAGE_KEY_ROLE);
+    // Clear last visited dashboard route/page state across logout
+    localStorage.removeItem(STORAGE_KEY_ARCH_TAB);
+    localStorage.removeItem(STORAGE_KEY_INT_TAB);
+    try {
+      sessionStorage.clear();
+    } catch (e) {}
     setTimeout(() => {
       window.location.href = redirectUrl;
     }, 150);
@@ -62,6 +76,7 @@ window.STACKLY_STORE = (function () {
   }
 
   function getArchTab() {
+    if (!isAuthenticated()) return 'overview';
     return localStorage.getItem(STORAGE_KEY_ARCH_TAB) || 'overview';
   }
 
@@ -70,6 +85,7 @@ window.STACKLY_STORE = (function () {
   }
 
   function getIntTab() {
+    if (!isAuthenticated()) return 'overview';
     return localStorage.getItem(STORAGE_KEY_INT_TAB) || 'overview';
   }
 

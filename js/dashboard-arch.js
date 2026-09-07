@@ -923,7 +923,7 @@ function getReportsHTML() {
           <div class="report-content-group">
             <div class="report-thumbnail-wrapper">
               <img 
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" 
+                src="assets/images/villa-aurelia.webp" 
                 alt="Villa Aurelia Architectural Closeout" 
                 class="report-thumbnail-img" 
               />
@@ -953,7 +953,7 @@ function getReportsHTML() {
           <div class="report-content-group">
             <div class="report-thumbnail-wrapper">
               <img 
-                src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=800&q=80" 
+                src="assets/images/horizon-office.webp" 
                 alt="Salem Residence Heritage Clearance" 
                 class="report-thumbnail-img" 
               />
@@ -983,7 +983,7 @@ function getReportsHTML() {
           <div class="report-content-group">
             <div class="report-thumbnail-wrapper">
               <img 
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" 
+                src="assets/images/vance-horizon.webp" 
                 alt="Horizon Office Geothermal Engineering" 
                 class="report-thumbnail-img" 
               />

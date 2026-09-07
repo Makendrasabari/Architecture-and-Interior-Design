@@ -792,7 +792,8 @@
           trigger: triggerSec,
           start: 'top 82%',
           once: true,
-          onEnter: () => runShuffleSequence()
+          onEnter: () => runShuffleSequence(),
+          onEnterBack: () => runShuffleSequence()
         });
       } else {
         runShuffleSequence();
@@ -1204,14 +1205,16 @@
             trigger: pair[0],
             start: 'top 85%',
             once: true,
-            onEnter: () => animateCardPair(pair[0], pair[1])
+            onEnter: () => animateCardPair(pair[0], pair[1]),
+            onEnterBack: () => animateCardPair(pair[0], pair[1])
           });
           // Also trigger on the second card if stacked vertically (e.g. on mobile/tablet)
           ScrollTrigger.create({
             trigger: pair[1],
             start: 'top 85%',
             once: true,
-            onEnter: () => animateSingleCard(pair[1], 0)
+            onEnter: () => animateSingleCard(pair[1], 0),
+            onEnterBack: () => animateSingleCard(pair[1], 0)
           });
         });
       } else {
@@ -1347,7 +1350,8 @@
           trigger: section,
           start: 'top 82%',
           once: true,
-          onEnter: () => playStagesSequence()
+          onEnter: () => playStagesSequence(),
+          onEnterBack: () => playStagesSequence()
         });
       } else {
         playStagesSequence();
@@ -1461,7 +1465,8 @@
           trigger: section,
           start: 'top 82%',
           once: true,
-          onEnter: () => playAwardsSequence()
+          onEnter: () => playAwardsSequence(),
+          onEnterBack: () => playAwardsSequence()
         });
       } else {
         playAwardsSequence();
@@ -1570,7 +1575,8 @@
           trigger: grid,
           start: 'top 82%',
           once: true,
-          onEnter: () => playContactSplitSequence()
+          onEnter: () => playContactSplitSequence(),
+          onEnterBack: () => playContactSplitSequence()
         });
       } else {
         playContactSplitSequence();
@@ -1704,7 +1710,8 @@
           trigger: grid,
           start: 'top 85%',
           once: true,
-          onEnter: () => playConsultationSequence()
+          onEnter: () => playConsultationSequence(),
+          onEnterBack: () => playConsultationSequence()
         });
       } else {
         playConsultationSequence();
@@ -1799,7 +1806,8 @@
           trigger: list,
           start: 'top 85%',
           once: true,
-          onEnter: () => playFaqSequence()
+          onEnter: () => playFaqSequence(),
+          onEnterBack: () => playFaqSequence()
         });
       } else {
         playFaqSequence();
@@ -2119,9 +2127,72 @@
     return tl;
   }
 
+  /**
+   * Hero Section Title Entrance Animation Engine:
+   * 1. Bold white text (.hero-title-main) slides in from the LEFT side (x: -90px -> 0, opacity: 0 -> 1).
+   * 2. Bold red text (.hero-title-accent) slides in from the RIGHT side (x: 90px -> 0, opacity: 0 -> 1).
+   * Applies across all pages (homepage hero & inner page heroes).
+   */
+  function animateHeroSectionTitles(scope) {
+    if (prefersReducedMotion()) return;
+    const root = scope || document;
+    const heroTitles = root.querySelectorAll('.hero-title, .page-hero-title, .page-hero h1');
+    if (heroTitles.length === 0) return;
+
+    heroTitles.forEach((heroTitle) => {
+      const mainText = heroTitle.querySelector('.hero-title-main');
+      const accentText = heroTitle.querySelector('.hero-title-accent');
+
+      if (typeof gsap !== 'undefined') {
+        const tl = gsap.timeline();
+
+        // 1. White text slides in from LEFT
+        if (mainText) {
+          gsap.set(mainText, { x: -90, opacity: 0 });
+          tl.to(
+            mainText,
+            {
+              x: 0,
+              opacity: 1,
+              duration: 0.85,
+              ease: 'power3.out',
+              onComplete: () => {
+                mainText.style.transform = 'none';
+                mainText.style.opacity = '1';
+              }
+            },
+            0.1
+          );
+        }
+
+        // 2. Red text slides in from RIGHT
+        if (accentText) {
+          gsap.set(accentText, { x: 90, opacity: 0 });
+          tl.to(
+            accentText,
+            {
+              x: 0,
+              opacity: 1,
+              duration: 0.85,
+              ease: 'power3.out',
+              onComplete: () => {
+                accentText.style.transform = 'none';
+                accentText.style.opacity = '1';
+              }
+            },
+            0.35
+          );
+        }
+      }
+    });
+  }
+
   // Scroll Trigger or Scope Animation Initialization
   function animateContainer(container) {
     const scope = container || document;
+
+    // Trigger hero section title entrance animation
+    animateHeroSectionTitles(scope);
 
     if (typeof ScrollTrigger !== 'undefined' && scope === document) {
       // Find each service detail block and bind independent ScrollTrigger
@@ -2132,7 +2203,8 @@
             trigger: block,
             start: 'top 82%',
             once: true,
-            onEnter: () => animateSingleServiceBlock(block)
+            onEnter: () => animateSingleServiceBlock(block),
+            onEnterBack: () => animateSingleServiceBlock(block)
           });
         });
       }
@@ -2186,7 +2258,8 @@
               trigger: sec,
               start: 'top 85%',
               once: true,
-              onEnter: () => animateSequence(sec)
+              onEnter: () => animateSequence(sec),
+              onEnterBack: () => animateSequence(sec)
             });
           }
         });
@@ -2213,6 +2286,7 @@
     initAll,
     animateContainer,
     animateSequence,
+    animateHeroSectionTitles,
     animateThreeCardGrids,
     animateThreeCardShuffle,
     animateSplitImageSections,

@@ -14,10 +14,10 @@ window.STACKLY_DATA = {
       area: '14,200 sq.ft',
       headline: 'Monumental limestone cantilever suspended over the Mediterranean horizon.',
       description: 'Carved directly into the cliffside topography, Villa Aurelia dissolves the boundary between natural rock strata and refined architectural concrete. Featuring sweeping glass facades, cascading infinity reflecting pools, and bespoke micro-cement interior volumes.',
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+      image: 'assets/images/villa-aurelia.webp',
       gallery: [
-        'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80'
+        'assets/images/salem-residence.webp',
+        'assets/images/urban-house.webp'
       ],
       status: 'Completed',
       progress: 100,
@@ -34,9 +34,9 @@ window.STACKLY_DATA = {
       area: '8,800 sq.ft',
       headline: 'A dialogue between historic Salem craftsmanship and austere modern minimalism.',
       description: 'Set within the historic architectural enclave of Salem, MA, this private residence juxtaposes charred cedar vertical cladding with brutalist thermal-break concrete and expansive floor-to-ceiling blackened steel apertures.',
-      image: 'https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=1200&q=80',
+      image: 'assets/images/horizon-office.webp',
       gallery: [
-        'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80'
+        'assets/images/kyoto-court.webp'
       ],
       status: 'Completed',
       progress: 100,
@@ -53,9 +53,9 @@ window.STACKLY_DATA = {
       area: '6,400 sq.ft',
       headline: 'Multi-tiered daylight well puncturing an urban cast-iron architectural volume.',
       description: 'A transformative urban townhome featuring an interior glass atrium, floating walnut and steel spiral staircase, fluted acoustic panelling, and integrated biophilic courtyards.',
-      image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80',
+      image: 'assets/images/terra-retreat.webp',
       gallery: [
-        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80'
+        'assets/images/space-planning.webp'
       ],
       status: 'In Construction',
       progress: 82,
@@ -72,9 +72,9 @@ window.STACKLY_DATA = {
       area: '36,000 sq.ft',
       headline: 'Geothermal-powered architectural headquarters sculpted from basalt and glass.',
       description: 'Designed as a net-zero commercial campus, Horizon Office integrates geothermal radiant slabs, dynamic solar facade fins, and raw volcanic stone surfaces into a state-of-the-art collaborative environment.',
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80',
+      image: 'assets/images/vance-horizon.webp',
       gallery: [
-        'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80'
+        'assets/images/athena-penthouse.webp'
       ],
       status: 'Design Development',
       progress: 64,
@@ -91,9 +91,9 @@ window.STACKLY_DATA = {
       area: '22,500 sq.ft',
       headline: 'Rammed earth pavilions embedded into the red rock landscape of the high desert.',
       description: 'An architectural eco-resort utilizing local red clay aggregate for rammed earth walls, low-emissivity glass curtain walls, and shaded private courtyards configured along solar orientation lines.',
-      image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
+      image: 'assets/images/solaris-tower.webp',
       gallery: [
-        'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80'
+        'assets/images/lumina-pavilion.webp'
       ],
       status: 'Completed',
       progress: 100,
@@ -110,9 +110,9 @@ window.STACKLY_DATA = {
       area: '5,200 sq.ft',
       headline: 'Contemporary architectural meditation on Japanese courtyard space planning.',
       description: 'An introspective residential retreat framing a central Zen rock garden through blackened cedar engawa terraces, ultra-thin sliding shoji glazed doors, and precision hand-finished concrete planes.',
-      image: 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1200&q=80',
+      image: 'assets/images/aura-residence.webp',
       gallery: [
-        'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=1200&q=80'
+        'assets/images/serene-haven.webp'
       ],
       status: 'Planning & Permitting',
       progress: 45,
@@ -136,7 +136,7 @@ window.STACKLY_DATA = {
         'Permitting & Building Code Compliance',
         'Detailed Construction Documentation'
       ],
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'
+      image: 'assets/images/villa-aurelia.webp'
     },
     {
       id: 'interior-design',
@@ -151,7 +151,7 @@ window.STACKLY_DATA = {
         'Bespoke Lighting Design & Controls',
         'Textile & Material Curation'
       ],
-      image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80'
+      image: 'assets/images/interior-atelier.webp'
     },
     {
       id: 'space-planning',
@@ -166,7 +166,7 @@ window.STACKLY_DATA = {
         'Flexible Modular Space Planning',
         'Acoustic & Privacy Matrixing'
       ],
-      image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80'
+      image: 'assets/images/space-planning.webp'
     },
     {
       id: '3d-visualization',
@@ -181,7 +181,7 @@ window.STACKLY_DATA = {
         'Material & Texture Digital Mockups',
         'Cinematic Architectural Animation'
       ],
-      image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80'
+      image: 'assets/images/kyoto-court.webp'
     },
     {
       id: 'landscape-design',
@@ -196,7 +196,7 @@ window.STACKLY_DATA = {
         'Outdoor Kitchens & Cantilever Pavilions',
         'Exterior Architectural Illumination'
       ],
-      image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80'
+      image: 'assets/images/solaris-tower.webp'
     },
     {
       id: 'project-management',
@@ -211,7 +211,7 @@ window.STACKLY_DATA = {
         'On-Site Construction Administration',
         'Turnkey Handover & Commissioning'
       ],
-      image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80'
+      image: 'assets/images/services-project-mgmt.webp'
     }
   ],
 
@@ -223,7 +223,7 @@ window.STACKLY_DATA = {
       date: 'Sep 2026',
       readTime: '6 min read',
       excerpt: 'How post-tensioned architectural concrete and concealed steel outriggers allow luxury structures to float effortlessly over natural landscapes.',
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80',
+      image: 'assets/images/villa-aurelia.webp',
       content: `Cantilever architecture has long represented the ultimate expression of human ambition against gravity. In contemporary residential practice, the cantilever is no longer merely a structural show of force—it has evolved into a delicate poetic device that frames horizons and dissolves the boundary between domestic comfort and raw landscape.
 
 ### Structural Integrity Hidden in Plain Sight
@@ -240,7 +240,7 @@ Modern cantilever envelopes require rigorous thermal barrier detailing to preven
       date: 'Aug 2026',
       readTime: '5 min read',
       excerpt: 'Examining the tactile resonance created when porous unfilled Italian travertine meets Shou Sugi Ban blackened wood in contemporary interiors.',
-      image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=80',
+      image: 'assets/images/interior-atelier.webp',
       content: `True luxury in interior architecture does not scream; it whispers through the weight, texture, and historical resonance of natural materials. The pairing of open-pore travertine alongside charred Japanese cedar creates a sensory friction that grounds the occupant.
 
 Travertine absorbs and softens daylight with its warm, calcium-rich matrix. Conversely, carbonized timber recedes into shadow, creating depth and framing views. When juxtaposed with brushed bronze architectural hardware, the space achieves a timeless dignity immune to transient design fads.`,
@@ -253,7 +253,7 @@ Travertine absorbs and softens daylight with its warm, calcium-rich matrix. Conv
       date: 'Aug 2026',
       readTime: '7 min read',
       excerpt: 'Why high-performance sustainable architecture begins with solar orientation, high-albedo envelopes, and deep earth thermal loops.',
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80',
+      image: 'assets/images/vance-horizon.webp',
       content: `Sustainability should never be an afterthought applied to an arbitrary facade. In STACKLY's sustainable projects, building form is directly sculpted by sunlight vectors, prevailing wind microclimates, and geothermal borehole depths.
 
 By utilizing high-mass thermal concrete floors, our buildings absorb excess solar heat during peak daytime hours and release it gently into the living volumes as temperatures drop at night, dramatically slashing HVAC energy demands.`,
@@ -266,7 +266,7 @@ By utilizing high-mass thermal concrete floors, our buildings absorb excess sola
       date: 'Jul 2026',
       readTime: '4 min read',
       excerpt: 'Choreographing interior living circulation around private contemplative Zen atriums and internal rainwater pools.',
-      image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80',
+      image: 'assets/images/terra-retreat.webp',
       content: `In dense metropolitan environments, exterior views are often compromised by urban noise and visual clutter. Our solution is the introverted architectural sanctuary: turning the house inward toward a private, glass-encased courtyard.
 
 Light filters through Japanese maple leaves and cascades across textured stone feature walls, casting dancing shadow patterns across living room floors throughout the day.`,
@@ -279,7 +279,7 @@ Light filters through Japanese maple leaves and cascades across textured stone f
       date: 'Jun 2026',
       readTime: '5 min read',
       excerpt: 'How bold crimson gradients and monolithic obsidian volumes are defining the next era of luxury architecture aesthetics.',
-      image: 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1000&q=80',
+      image: 'assets/images/aura-residence.webp',
       content: `The era of all-beige neutral minimalism is evolving into an era of confident, deliberate architectural contrast. Clean white gallery volumes are now juxtaposed with deep charcoal structural frames and sculptural crimson accents.
 
 A single red-gradient pivot door, a crimson lacquered wine cellar niche, or subtle red linear cove lighting transforms clean architectural geometry into an unforgettable visual experience.`,
@@ -292,7 +292,7 @@ A single red-gradient pivot door, a crimson lacquered wine cellar niche, or subt
       date: 'May 2026',
       readTime: '8 min read',
       excerpt: 'An inside look into the 24-month design and construction journey of our award-winning Salem Massachusetts studio commission.',
-      image: 'https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=1000&q=80',
+      image: 'assets/images/horizon-office.webp',
       content: `Building in historic Salem requires immense reverence for historical architectural typologies. For the Salem Residence, our studio spent six months studying maritime carpentry, local stone foundations, and historical roof pitches before putting pen to paper.
 
 The final home features custom-milled white pine, locally quarried granite plinths, and triple-glazed architectural curtain walls that celebrate Salem's heritage while establishing an uncompromising modern vocabulary.`,
@@ -308,7 +308,7 @@ The final home features custom-milled white pine, locally quarried granite plint
       finish: 'Ultra-Matte Polyurethane & Hand-Rubbed Oil',
       origin: 'Appalachian Valley, USA',
       durability: 'Class A Commercial',
-      image: 'https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?auto=format&fit=crop&w=600&q=80',
+      image: 'assets/images/blog-biophilic.webp',
       specs: 'Moisture content 7-9%, FSC Certified sustainably harvested, rift cut grain alignment.',
       applications: 'Architectural wall paneling, bespoke kitchen cabinetry, executive desks.'
     },
@@ -319,7 +319,7 @@ The final home features custom-milled white pine, locally quarried granite plint
       finish: 'Deep Fumed Reactive Stain, Wire-Brushed',
       origin: 'Burgundy, France',
       durability: 'Class A Commercial (Janka 1360)',
-      image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80',
+      image: 'assets/images/blog-monolithic.webp',
       specs: '220mm wide plank, 6mm solid wear layer on birch multi-ply substrate.',
       applications: 'Monumental chevron flooring, floating stair treads, feature ceilings.'
     },
@@ -330,7 +330,7 @@ The final home features custom-milled white pine, locally quarried granite plint
       finish: 'Marine-Grade Natural Penetrating Wax',
       origin: 'Certified Plantations, Myanmar',
       durability: 'Extreme Weather & Water Resistance',
-      image: 'https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=600&q=80',
+      image: 'assets/images/blog-acoustics.webp',
       specs: 'Naturally high silica and oil content, insect resistant, zero warpage outdoors.',
       applications: 'Poolside terraces, exterior soffits, spa wet-room decking.'
     },
@@ -341,7 +341,7 @@ The final home features custom-milled white pine, locally quarried granite plint
       finish: 'Honed, Open-Pore Architectural Matrix',
       origin: 'Tivoli, Italy',
       durability: 'High Compressive Strength (112 MPa)',
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80',
+      image: 'assets/images/villa-aurelia.webp',
       specs: 'Calcite alabaster composition with subtle linear thermal veining.',
       applications: 'Interior monolithic fireplace towers, bathroom vanity blocks, exterior cladding.'
     },
@@ -352,7 +352,7 @@ The final home features custom-milled white pine, locally quarried granite plint
       finish: 'Velvet Satin Honed (Zero Glare)',
       origin: 'Carrara, Italy',
       durability: 'Medium Density Luxury Interior',
-      image: 'https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=600&q=80',
+      image: 'assets/images/horizon-office.webp',
       specs: 'Bookmatched slab sets, ultra-pure crystalline calcium carbonate ground.',
       applications: 'Kitchen waterfall islands, master spa slabs, lobby reception monoliths.'
     },
@@ -363,7 +363,7 @@ The final home features custom-milled white pine, locally quarried granite plint
       finish: 'Polished or Leathered Deep Black',
       origin: 'Basque Country, Spain',
       durability: 'Dense Fine-Grain Metamorphic',
-      image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80',
+      image: 'assets/images/terra-retreat.webp',
       specs: 'Deep obsidian ground punctuated by striking diagonal white calcite fractures.',
       applications: 'Bar surfaces, powder room feature alcoves, architectural bench plinths.'
     },
@@ -374,7 +374,7 @@ The final home features custom-milled white pine, locally quarried granite plint
       finish: 'Micro-Directional Satin with Nano-Ceramic Seal',
       origin: 'Solingen, Germany',
       durability: 'Anti-Tarnish Lifetime PVD Finish',
-      image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80',
+      image: 'assets/images/blog-monolithic.webp',
       specs: 'Solid alloy 385 architectural brass, custom warm champagne tone.',
       applications: 'Custom door pull hardware, concealed cabinet reveals, luminaire stems.'
     },
@@ -385,7 +385,7 @@ The final home features custom-milled white pine, locally quarried granite plint
       finish: 'Cold-Rolled Acid Etched & Beeswax Buffed',
       origin: 'Sheffield, United Kingdom',
       durability: 'Structural Industrial Grade',
-      image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80',
+      image: 'assets/images/services-project-mgmt.webp',
       specs: 'Structural 8mm plate, hand-patinated with mottled charcoal-to-indigo undertones.',
       applications: 'Fireplace surrounds, staircase stringers, glass partition frames.'
     },
@@ -396,7 +396,7 @@ The final home features custom-milled white pine, locally quarried granite plint
       finish: 'Low-Iron High Clarity Textured Pattern',
       origin: 'Antwerp, Belgium',
       durability: 'Tempered & Laminated Safety Certified',
-      image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=600&q=80',
+      image: 'assets/images/kyoto-court.webp',
       specs: '12mm thickness, 10mm fluting pitch, acoustic transmission class STC 36.',
       applications: 'Office conference dividers, master bath shower enclosures, wine room doors.'
     },
@@ -407,7 +407,7 @@ The final home features custom-milled white pine, locally quarried granite plint
       finish: 'Body-Tinted Float Glass with Anti-Reflective Coating',
       origin: 'St. Gobain, France',
       durability: '10mm Toughened Safety Glass',
-      image: 'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=600&q=80',
+      image: 'assets/images/serene-haven.webp',
       specs: 'Light transmission 28%, blocks 72% of solar glare while maintaining transparency.',
       applications: 'Walk-in dressing room wardrobes, backlit bar display shelving.'
     },
@@ -418,7 +418,7 @@ The final home features custom-milled white pine, locally quarried granite plint
       finish: 'Untreated Natural Curl with Stain Resistance',
       origin: 'Biella, Italy',
       durability: '65,000 Martindale Rubs (Heavy Domestic & Commercial)',
-      image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80',
+      image: 'assets/images/interior-atelier.webp',
       specs: '70% virgin wool, 20% alpaca, 10% silk. Flame retardant EN 1021.',
       applications: 'Curved custom sofas, sculptural armchairs, acoustic upholstered headboards.'
     },
@@ -429,7 +429,7 @@ The final home features custom-milled white pine, locally quarried granite plint
       finish: 'Enzyme Washed for Tactile Softness',
       origin: 'Flanders, Belgium',
       durability: 'Oeko-Tex Standard 100 Class 1',
-      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80',
+      image: 'assets/images/urban-house.webp',
       specs: '100% long-staple European flax, 480 g/m² heavy weight drape.',
       applications: 'Floor-to-ceiling architectural drapery, tailored lounge cushions, roman shades.'
     }

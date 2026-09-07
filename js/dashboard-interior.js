@@ -669,7 +669,7 @@ function getDesignReportsHTML() {
           <div class="report-content-group">
             <div class="report-thumbnail-wrapper">
               <img 
-                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" 
+                src="assets/images/terra-retreat.webp" 
                 alt="Penthouse Living & Hearth Suite" 
                 class="report-thumbnail-img" 
               />
@@ -699,7 +699,7 @@ function getDesignReportsHTML() {
           <div class="report-content-group">
             <div class="report-thumbnail-wrapper">
               <img 
-                src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=800&q=80" 
+                src="assets/images/horizon-office.webp" 
                 alt="Culinary Suite Architectural Lighting" 
                 class="report-thumbnail-img" 
               />
@@ -729,7 +729,7 @@ function getDesignReportsHTML() {
           <div class="report-content-group">
             <div class="report-thumbnail-wrapper">
               <img 
-                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" 
+                src="assets/images/interior-atelier.webp" 
                 alt="Luxury Fabrics & Drapery" 
                 class="report-thumbnail-img" 
               />
