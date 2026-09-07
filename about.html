@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
+    try {
+      if (sessionStorage.getItem('stackly_returning_from_404') === 'true' && sessionStorage.getItem('stackly_saved_scroll')) {
+        var _savedY = parseInt(sessionStorage.getItem('stackly_saved_scroll'), 10);
+        if (!isNaN(_savedY)) { window.scrollTo(0, _savedY); }
+      } else {
+        window.scrollTo(0, 0);
+      }
+    } catch (e) { window.scrollTo(0, 0); }
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>About Studio — STACKLY Architecture & Interior Design | Salem</title>
+  <meta name="description" content="Discover the philosophy, principals, and international heritage of STACKLY Architecture and Interior Design Atelier, headquartered in Salem, Massachusetts." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/Logo11.webp" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Pure CSS Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/motion.css" />
+</head>
+<body class="theme-light">
+  <!-- Custom Cursor -->
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring">
+      <span class="cursor-text">EXPLORE</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-navbar nav-dark nav-transparent" id="site-header">
+    <div class="navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="STACKLY Home">
+        <img src="assets/Logo11.webp" alt="STACKLY Architecture & Interiors" class="brand-logo-img" />
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar-actions">
+        <a href="login.html" class="btn btn-primary btn-sm">
+          <span>Login</span>
+          <span class="btn-icon">→</span>
+        </a>
+
+        <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="STACKLY Home">
+        <img src="assets/Logo11.webp" alt="STACKLY Architecture & Interiors" class="brand-logo-img" style="height: 38px; width: auto;" />
+      </a>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link active">About</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-actions">
+      <a href="login.html" class="btn btn-primary" style="width: 100%; max-width: 240px; justify-content: center;">
+        <span>Login</span>
+        <span class="btn-icon">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="page-view about-page">
+    <!-- About Hero -->
+    <section class="page-hero">
+      <img 
+        src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=2000&q=85" 
+        alt="About STACKLY Atelier Architecture" 
+        class="page-hero-bg"
+      />
+      <div class="page-hero-overlay"></div>
+      <div class="container page-hero-content">
+        <span class="eyebrow" data-anim="text-reveal">About STACKLY Atelier</span>
+        <h1 data-anim="text-reveal" class="page-hero-title">
+          <span class="hero-title-main">Crafting Monolithic Architecture</span>
+          <span class="hero-title-accent">With Human Intimacy.</span>
+        </h1>
+        <p data-anim="text-reveal">
+          Operating from our headquarters in historic Salem, Massachusetts, STACKLY brings together master architects, interior visionaries, structural engineers, and material artisans to shape private and civic spaces across the globe.
+        </p>
+      </div>
+    </section>
+
+    <!-- Visual Spread -->
+    <section style="padding: 5rem 0; background: var(--color-pure-white);">
+      <div class="container">
+        <div class="about-manifesto-grid" style="display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 2.5rem; align-items: stretch;" data-anim="image-reveal">
+          <img 
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" 
+            alt="STACKLY Architecture Atelier Work" 
+            style="width: 100%; height: 500px; object-fit: cover; border-radius: var(--radius-sm);"
+          />
+          <div style="background: var(--color-off-white); border-radius: var(--radius-sm); padding: 3rem; display: flex; flex-direction: column; justify-content: center;">
+            <span class="badge badge-red" style="margin-bottom: 1.5rem; align-self: flex-start;">Studio Manifesto</span>
+            <h3 style="font-size: 1.75rem; margin-bottom: 1.25rem; line-height: 1.3;">"Architecture is the art of sculpting stillness from raw matter."</h3>
+            <p style="font-size: 0.9375rem; color: var(--color-charcoal-muted); line-height: 1.7;">
+              Every project begins not on a computer screen, but with an intimate interrogation of the site: its solar trajectory, prevailing winds, soil composition, and cultural topography.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Animated Stats Section -->
+    <section style="background: var(--color-near-black); color: var(--color-pure-white); padding: 6rem 0;">
+      <div class="container">
+        <div style="text-align: center; max-width: 600px; margin: 0 auto 4rem;">
+          <span class="eyebrow" style="color: var(--color-red-primary);">Studio Metrics</span>
+          <h2 style="color: var(--color-pure-white);">15 Years of Architectural Excellence</h2>
+        </div>
+
+        <div class="stats-grid" style="border-top: none; padding-top: 0;">
+          <div class="stat-item" style="align-items: center; text-align: center;">
+            <div class="stat-number-wrapper">
+              <span class="stat-number" style="color: var(--color-pure-white);" data-counter-target="15">0</span>
+              <span class="stat-plus">+</span>
+            </div>
+            <span class="stat-label" style="color: rgba(255,255,255,0.7);">Years in Practice</span>
+          </div>
+          <div class="stat-item" style="align-items: center; text-align: center;">
+            <div class="stat-number-wrapper">
+              <span class="stat-number" style="color: var(--color-pure-white);" data-counter-target="120">0</span>
+              <span class="stat-plus">+</span>
+            </div>
+            <span class="stat-label" style="color: rgba(255,255,255,0.7);">Monumental Projects</span>
+          </div>
+          <div class="stat-item" style="align-items: center; text-align: center;">
+            <div class="stat-number-wrapper">
+              <span class="stat-number" style="color: var(--color-pure-white);" data-counter-target="45">0</span>
+              <span class="stat-plus">+</span>
+            </div>
+            <span class="stat-label" style="color: rgba(255,255,255,0.7);">Design & Architecture Awards</span>
+          </div>
+          <div class="stat-item" style="align-items: center; text-align: center;">
+            <div class="stat-number-wrapper">
+              <span class="stat-number" style="color: var(--color-pure-white);" data-counter-target="18">0</span>
+              <span class="stat-plus">+</span>
+            </div>
+            <span class="stat-label" style="color: rgba(255,255,255,0.7);">Global Metropolises</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section class="leadership-section" style="padding: 4.5rem 0; background: var(--color-pure-white); overflow: hidden;">
+      <div class="container">
+        <div class="section-header" data-anim="text-reveal" style="margin-bottom: 2.5rem;">
+          <div>
+            <span class="eyebrow">Principals &amp; Visionaries</span>
+            <h2>Atelier Leadership</h2>
+          </div>
+          <p style="max-width: 440px; color: var(--color-charcoal-muted); font-size: 0.9375rem;">
+            A curated partnership of AIA-licensed architects, interior artists, and master planners guiding global commissions.
+          </p>
+      </div>
+
+      <div class="horizontal-running-marquee leadership-marquee">
+        <div class="horizontal-running-track leadership-track">
+          <!-- Continuous Set 1 -->
+          <div class="leadership-card">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Marcus Vance" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Marcus Vance, FAIA</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Founding Partner &amp; Head of Architecture</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Graduate of Harvard GSD. 20+ years leading cantilevered residential and high-performance civic structures.</p>
+          </div>
+
+          <div class="leadership-card">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Julian Chen" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Julian Chen, AIA, LEED AP</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Partner &amp; Technical Director</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Specialist in robotic prefabrication, passive facade thermodynamics, and net-zero envelope engineering.</p>
+          </div>
+
+          <div class="leadership-card">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Elena Rostova" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Elena Rostova, ASID</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Partner &amp; Director of Interiors</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Master of interior architecture from Milan. Curator of bespoke furniture editions and rare material textures.</p>
+          </div>
+
+          <div class="leadership-card">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Devyn Sterling" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Devyn Sterling, RIBA</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Principal Landscape Architect</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Pioneer in biophilic site integration, subterranean courtyard microclimates, and indigenous botanical curation.</p>
+          </div>
+
+          <div class="leadership-card">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80" alt="Soren Lindqvist" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Soren Lindqvist, Intl. AIA</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Head of Computational Design</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Algorithmic geometry specialist from ETH Zürich. Developer of parametric structural optimization engines.</p>
+          </div>
+
+          <div class="leadership-card">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Amara Okafor" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Amara Okafor, NCIDQ</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Director of Material &amp; Lighting</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Expert in architectural acoustics, circadian lighting design, and raw monolithic stone sourcing.</p>
+          </div>
+
+          <!-- Continuous Set 1 Loop Repeat -->
+          <div class="leadership-card">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Marcus Vance" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Marcus Vance, FAIA</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Founding Partner &amp; Head of Architecture</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Graduate of Harvard GSD. 20+ years leading cantilevered residential and high-performance civic structures.</p>
+          </div>
+
+          <div class="leadership-card">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Julian Chen" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Julian Chen, AIA, LEED AP</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Partner &amp; Technical Director</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Specialist in robotic prefabrication, passive facade thermodynamics, and net-zero envelope engineering.</p>
+          </div>
+
+          <div class="leadership-card">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Elena Rostova" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Elena Rostova, ASID</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Partner &amp; Director of Interiors</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Master of interior architecture from Milan. Curator of bespoke furniture editions and rare material textures.</p>
+          </div>
+
+          <div class="leadership-card">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Devyn Sterling" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Devyn Sterling, RIBA</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Principal Landscape Architect</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Pioneer in biophilic site integration, subterranean courtyard microclimates, and indigenous botanical curation.</p>
+          </div>
+
+          <div class="leadership-card">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80" alt="Soren Lindqvist" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Soren Lindqvist, Intl. AIA</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Head of Computational Design</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Algorithmic geometry specialist from ETH Zürich. Developer of parametric structural optimization engines.</p>
+          </div>
+
+          <div class="leadership-card">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Amara Okafor" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Amara Okafor, NCIDQ</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Director of Material &amp; Lighting</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Expert in architectural acoustics, circadian lighting design, and raw monolithic stone sourcing.</p>
+          </div>
+
+          <!-- Seamless Loop Set 2 (Identical Clone for 100% Continuous Flow) -->
+          <div class="leadership-card" aria-hidden="true">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Marcus Vance" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Marcus Vance, FAIA</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Founding Partner &amp; Head of Architecture</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Graduate of Harvard GSD. 20+ years leading cantilevered residential and high-performance civic structures.</p>
+          </div>
+
+          <div class="leadership-card" aria-hidden="true">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Julian Chen" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Julian Chen, AIA, LEED AP</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Partner &amp; Technical Director</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Specialist in robotic prefabrication, passive facade thermodynamics, and net-zero envelope engineering.</p>
+          </div>
+
+          <div class="leadership-card" aria-hidden="true">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Elena Rostova" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Elena Rostova, ASID</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Partner &amp; Director of Interiors</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Master of interior architecture from Milan. Curator of bespoke furniture editions and rare material textures.</p>
+          </div>
+
+          <div class="leadership-card" aria-hidden="true">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Devyn Sterling" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Devyn Sterling, RIBA</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Principal Landscape Architect</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Pioneer in biophilic site integration, subterranean courtyard microclimates, and indigenous botanical curation.</p>
+          </div>
+
+          <div class="leadership-card" aria-hidden="true">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80" alt="Soren Lindqvist" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Soren Lindqvist, Intl. AIA</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Head of Computational Design</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Algorithmic geometry specialist from ETH Zürich. Developer of parametric structural optimization engines.</p>
+          </div>
+
+          <div class="leadership-card" aria-hidden="true">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Amara Okafor" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Amara Okafor, NCIDQ</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Director of Material &amp; Lighting</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Expert in architectural acoustics, circadian lighting design, and raw monolithic stone sourcing.</p>
+          </div>
+
+          <!-- Seamless Loop Set 2 Repeat -->
+          <div class="leadership-card" aria-hidden="true">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Marcus Vance" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Marcus Vance, FAIA</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Founding Partner &amp; Head of Architecture</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Graduate of Harvard GSD. 20+ years leading cantilevered residential and high-performance civic structures.</p>
+          </div>
+
+          <div class="leadership-card" aria-hidden="true">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Julian Chen" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Julian Chen, AIA, LEED AP</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Partner &amp; Technical Director</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Specialist in robotic prefabrication, passive facade thermodynamics, and net-zero envelope engineering.</p>
+          </div>
+
+          <div class="leadership-card" aria-hidden="true">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Elena Rostova" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Elena Rostova, ASID</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Partner &amp; Director of Interiors</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Master of interior architecture from Milan. Curator of bespoke furniture editions and rare material textures.</p>
+          </div>
+
+          <div class="leadership-card" aria-hidden="true">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Devyn Sterling" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Devyn Sterling, RIBA</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Principal Landscape Architect</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Pioneer in biophilic site integration, subterranean courtyard microclimates, and indigenous botanical curation.</p>
+          </div>
+
+          <div class="leadership-card" aria-hidden="true">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80" alt="Soren Lindqvist" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Soren Lindqvist, Intl. AIA</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Head of Computational Design</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Algorithmic geometry specialist from ETH Zürich. Developer of parametric structural optimization engines.</p>
+          </div>
+
+          <div class="leadership-card" aria-hidden="true">
+            <div class="leadership-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Amara Okafor" />
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">Amara Okafor, NCIDQ</h3>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Director of Material &amp; Lighting</p>
+            <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.55;">Expert in architectural acoustics, circadian lighting design, and raw monolithic stone sourcing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards & Recognition -->
+    <section style="background: var(--color-off-white); padding: 6rem 0; border-top: 1px solid rgba(20,20,22,0.06); overflow: hidden;" class="awards-section">
+      <div class="container">
+        <div style="margin-bottom: 3.5rem;">
+          <span class="eyebrow">Accolades</span>
+          <h2>Distinguished Honors & Awards</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;" class="awards-grid" data-anim="awards-criss-cross">
+          <div style="background: var(--color-pure-white); padding: 1.75rem 2rem; border-radius: var(--radius-sm); border-left: 3px solid var(--color-red-primary); display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <h4 style="font-size: 1.15rem; margin-bottom: 0.25rem;">Pritzker Emerging Practice Commendation</h4>
+              <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted);">International Jury for Cantilever Engineering</p>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 0.9375rem; font-weight: 700; color: var(--color-red-primary);">2025</span>
+          </div>
+
+          <div style="background: var(--color-pure-white); padding: 1.75rem 2rem; border-radius: var(--radius-sm); border-left: 3px solid var(--color-red-primary); display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <h4 style="font-size: 1.15rem; margin-bottom: 0.25rem;">AIA National Honor Award for Architecture</h4>
+              <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted);">Salem Residence Restoration & Modern Extension</p>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 0.9375rem; font-weight: 700; color: var(--color-red-primary);">2025</span>
+          </div>
+
+          <div style="background: var(--color-pure-white); padding: 1.75rem 2rem; border-radius: var(--radius-sm); border-left: 3px solid var(--color-red-primary); display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <h4 style="font-size: 1.15rem; margin-bottom: 0.25rem;">World Architecture Festival (WAF) Residential Winner</h4>
+              <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted);">Villa Aurelia, Amalfi Coast Project</p>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 0.9375rem; font-weight: 700; color: var(--color-red-primary);">2024</span>
+          </div>
+
+          <div style="background: var(--color-pure-white); padding: 1.75rem 2rem; border-radius: var(--radius-sm); border-left: 3px solid var(--color-red-primary); display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <h4 style="font-size: 1.15rem; margin-bottom: 0.25rem;">ArchDaily Building of the Year Award</h4>
+              <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted);">Terra Retreat Sedona High Desert Architecture</p>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 0.9375rem; font-weight: 700; color: var(--color-red-primary);">2024</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURAL PILLARS (4-CARD GRID) -->
+    <section class="pillars-section">
+      <div class="container">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 4rem;">
+          <span class="eyebrow">Methodology & Rigor</span>
+          <h2>Our Core Architectural Pillars</h2>
+          <p style="color: var(--color-charcoal-muted); font-size: 1.0625rem; line-height: 1.7; margin-top: 1rem;">
+            Every STACKLY structure synthesizes heavy structural geometry with poetic daylight, creating enduring monuments for generations.
+          </p>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Monolithic Precision" class="pillar-card-bg-img" loading="lazy" />
+            <div class="pillar-card-content">
+              <span class="pillar-card-num">01</span>
+              <h3 class="pillar-card-title">Monolithic Precision</h3>
+              <p class="pillar-card-desc">
+                Uncompromising structural integrity through post-tensioned concrete, cantilevered steel frames, and seamless spatial transitions.
+              </p>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Sensory Materiality" class="pillar-card-bg-img" loading="lazy" />
+            <div class="pillar-card-content">
+              <span class="pillar-card-num">02</span>
+              <h3 class="pillar-card-title">Sensory Materiality</h3>
+              <p class="pillar-card-desc">
+                Sourcing authentic, patinated, and rare materials—from hand-brushed Travertine to charred Shou Sugi Ban cedar and solid bronze.
+              </p>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Climate Thermodynamics" class="pillar-card-bg-img" loading="lazy" />
+            <div class="pillar-card-content">
+              <span class="pillar-card-num">03</span>
+              <h3 class="pillar-card-title">Climate Thermodynamics</h3>
+              <p class="pillar-card-desc">
+                Sculpting building envelopes for passive solar gain, micro-climate ventilation, and long-term net-zero energy resilience.
+              </p>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="Intimate Ergonomics" class="pillar-card-bg-img" loading="lazy" />
+            <div class="pillar-card-content">
+              <span class="pillar-card-num">04</span>
+              <h3 class="pillar-card-title">Intimate Ergonomics</h3>
+              <p class="pillar-card-desc">
+                Designing for the human body—calibrating acoustic reflection, tactile thresholds, and light orientation for daily serenity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION 2: Global Atelier Network -->
+    <section style="padding: 6.5rem 0; background: var(--color-near-black); color: var(--color-pure-white); border-top: 1px solid rgba(255,255,255,0.08); overflow: hidden;" class="atelier-network-section">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4rem; flex-wrap: wrap; gap: 2rem;">
+          <div>
+            <span class="eyebrow" style="color: var(--color-red-primary);">Global Footprint</span>
+            <h2 style="color: var(--color-pure-white);">International Atelier Network</h2>
+          </div>
+          <p style="max-width: 460px; color: rgba(255,255,255,0.7); font-size: 0.9375rem; line-height: 1.6;">
+            Collaborating seamlessly across our Salem headquarters, European material studio, and Asian parametric computation lab.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem;" data-anim="3card-shuffle">
+          <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="badge badge-red" style="margin-bottom: 1.25rem;">Headquarters</span>
+              <h3 style="color: var(--color-pure-white); font-size: 1.5rem; margin-bottom: 0.5rem;">Salem Atelier & Design Suite</h3>
+              <p style="color: var(--color-red-primary); font-family: var(--font-mono); font-size: 0.8125rem; margin-bottom: 1.25rem;">MASSACHUSETTS, USA</p>
+              <p style="color: rgba(255,255,255,0.7); font-size: 0.9375rem; line-height: 1.7;">
+                Directing global architectural master planning, client consultations, structural design, and 1:1 VR immersive presentations.
+              </p>
+            </div>
+            <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px stroke rgba(255,255,255,0.1); font-family: var(--font-mono); font-size: 0.8125rem; color: rgba(255,255,255,0.5);">
+              142 Washington St, Salem MA
+            </div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="badge badge-outline" style="color: var(--color-pure-white); border-color: rgba(255,255,255,0.3); margin-bottom: 1.25rem;">Material Lab</span>
+              <h3 style="color: var(--color-pure-white); font-size: 1.5rem; margin-bottom: 0.5rem;">Milan Stone & Textile Gallery</h3>
+              <p style="color: var(--color-red-primary); font-family: var(--font-mono); font-size: 0.8125rem; margin-bottom: 1.25rem;">MILAN, ITALY</p>
+              <p style="color: rgba(255,255,255,0.7); font-size: 0.9375rem; line-height: 1.7;">
+                Curating rare European marble blocks, hand-finished bronzes, bespoke wools, and artisanal Italian joinery.
+              </p>
+            </div>
+            <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px stroke rgba(255,255,255,0.1); font-family: var(--font-mono); font-size: 0.8125rem; color: rgba(255,255,255,0.5);">
+              Via Solferino 18, Brera Milan
+            </div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="badge badge-outline" style="color: var(--color-pure-white); border-color: rgba(255,255,255,0.3); margin-bottom: 1.25rem;">Research Studio</span>
+              <h3 style="color: var(--color-pure-white); font-size: 1.5rem; margin-bottom: 0.5rem;">Tokyo Parametric & Robotics Lab</h3>
+              <p style="color: var(--color-red-primary); font-family: var(--font-mono); font-size: 0.8125rem; margin-bottom: 1.25rem;">TOKYO, JAPAN</p>
+              <p style="color: rgba(255,255,255,0.7); font-size: 0.9375rem; line-height: 1.7;">
+                Pioneering parametric computational facade modeling, robotic timber joinery, and seismic structural damping.
+              </p>
+            </div>
+            <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px stroke rgba(255,255,255,0.1); font-family: var(--font-mono); font-size: 0.8125rem; color: rgba(255,255,255,0.5);">
+              Minato-ku, Roppongi Tokyo
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section style="background-color: var(--color-near-black); color: var(--color-pure-white); padding: 6rem 0;">
+      <div class="container" style="text-align: center; max-width: 650px; margin: 0 auto;">
+        <span class="eyebrow" style="color: var(--color-red-primary);">Salem Headquarters</span>
+        <h2 style="color: var(--color-pure-white); margin-bottom: 1.25rem;">Partner With Our Principals</h2>
+        <p style="color: rgba(255,255,255,0.75); font-size: 1.125rem; line-height: 1.7; margin-bottom: 2.5rem;">
+          Schedule an in-person meeting at 142 Washington Street or reserve a private digital consultation.
+        </p>
+        <a href="404.html" class="btn btn-primary btn-lg">
+          <span>Schedule Atelier Consultation</span>
+          <span class="btn-icon">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1.5rem;" aria-label="STACKLY Home">
+            <img src="assets/Logo11.webp" alt="STACKLY Architecture & Interiors" class="brand-logo-img" />
+          </a>
+          <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9375rem; max-width: 320px; line-height: 1.7; margin-bottom: 1.5rem;">
+            An international architecture and interior design atelier headquartered in Salem. Sculpting light, structural cantilever volumes, and sensory material landscapes.
+          </p>
+          <div style="display: flex; gap: 0.85rem; align-items: center;">
+            <a href="404.html" aria-label="Instagram" class="footer-social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="404.html" aria-label="LinkedIn" class="footer-social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="404.html" aria-label="Twitter / X" class="footer-social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+            </a>
+            <a href="404.html" aria-label="Pinterest" class="footer-social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.15 2.52 7.7 6.13 9.17-.08-.78-.15-1.98.03-2.83.17-.74 1.09-4.63 1.09-4.63s-.28-.56-.28-1.39c0-1.3.75-2.27 1.69-2.27.8 0 1.18.6 1.18 1.32 0 .8-.51 2.01-.78 3.12-.22.93.46 1.69 1.37 1.69 1.65 0 2.92-1.74 2.92-4.25 0-2.22-1.6-3.77-3.87-3.77-2.64 0-4.19 1.98-4.19 4.02 0 .8.31 1.65.69 2.12.08.09.09.18.06.3-.07.29-.23.93-.26 1.06-.04.18-.14.22-.33.13-1.23-.57-2-2.37-2-3.82 0-3.11 2.26-5.97 6.52-5.97 3.42 0 6.08 2.44 6.08 5.7 0 3.4-2.14 6.13-5.12 6.13-1 0-1.94-.52-2.26-1.13l-.62 2.36c-.22.86-.83 1.94-1.24 2.6 1.13.35 2.34.54 3.59.54 5.52 0 10-4.48 10-10S17.52 2 12 2z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Explore</h4>
+          <ul class="footer-links-list">
+            <li><a href="404.html">Featured Projects</a></li>
+            <li><a href="404.html">Architecture Practice</a></li>
+            <li><a href="404.html">Interior Design Atelier</a></li>
+            <li><a href="404.html">Our 6-Step Process</a></li>
+            <li><a href="404.html">Studio Command Center</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Salem Studio</h4>
+          <div style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.9375rem; color: rgba(255,255,255,0.75);">
+            <div>
+              <strong style="color: var(--color-pure-white); display: block;">Address</strong>
+              142 Washington Street, Suite 400<br>Historic District, Salem, MA 01970
+            </div>
+            <div>
+              <strong style="color: var(--color-pure-white); display: block;">Direct Inquiries</strong>
+              <a href="mailto:salem@stackly-studio.com" style="color: var(--color-red-primary);">salem@stackly-studio.com</a><br>
+              +1 (978) 745-8800
+            </div>
+            <div>
+              <strong style="color: var(--color-pure-white); display: block;">Studio Hours</strong>
+              Monday – Friday: 08:30 – 18:00 EST<br>
+              Saturday: By Appointment Only
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © 2026 STACKLY Architecture & Interior Design. All rights reserved.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="404.html">Confidentiality Protocol</a>
+          <a href="404.html">Terms of Practice</a>
+          <a href="404.html">Architectural Licensing</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Motion & Animation System -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/motion.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

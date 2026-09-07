@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
+    try {
+      if (sessionStorage.getItem('stackly_returning_from_404') === 'true' && sessionStorage.getItem('stackly_saved_scroll')) {
+        var _savedY = parseInt(sessionStorage.getItem('stackly_saved_scroll'), 10);
+        if (!isNaN(_savedY)) { window.scrollTo(0, _savedY); }
+      } else {
+        window.scrollTo(0, 0);
+      }
+    } catch (e) { window.scrollTo(0, 0); }
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Salem Atelier & Contact — STACKLY Architecture & Interior Design</title>
+  <meta name="description" content="Initiate a commission consultation with STACKLY Architecture & Interior Design. Visit our Salem Massachusetts design atelier or submit an inquiry brief." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/Logo11.webp" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Pure CSS Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/motion.css" />
+</head>
+<body class="theme-light">
+  <!-- Custom Cursor -->
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring">
+      <span class="cursor-text">EXPLORE</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-navbar nav-dark nav-transparent" id="site-header">
+    <div class="navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="STACKLY Home">
+        <img src="assets/Logo11.webp" alt="STACKLY Architecture & Interiors" class="brand-logo-img" />
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar-actions">
+        <a href="login.html" class="btn btn-primary btn-sm">
+          <span>Login</span>
+          <span class="btn-icon">→</span>
+        </a>
+
+        <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="STACKLY Home">
+        <img src="assets/Logo11.webp" alt="STACKLY Architecture & Interiors" class="brand-logo-img" style="height: 38px; width: auto;" />
+      </a>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+      <li><a href="contact.html" class="mobile-nav-link active">Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-actions">
+      <a href="login.html" class="btn btn-primary" style="width: 100%; max-width: 240px; justify-content: center;">
+        <span>Login</span>
+        <span class="btn-icon">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="page-view contact-page">
+    <!-- Contact Hero -->
+    <section class="page-hero">
+      <img 
+        src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=85" 
+        alt="Salem Atelier Headquarters" 
+        class="page-hero-bg"
+      />
+      <div class="page-hero-overlay"></div>
+      <div class="container page-hero-content">
+        <span class="eyebrow" data-anim="text-reveal">Salem Headquarters & Global Atelier</span>
+        <h1 data-anim="text-reveal" class="page-hero-title">
+          <span class="hero-title-main">Initiate An</span>
+          <span class="hero-title-accent">Architectural Dialogue.</span>
+        </h1>
+        <p data-anim="text-reveal">
+          Our Salem studio welcomes private prospective clients, institutional patrons, and design collaborators for confidential project consultations.
+        </p>
+      </div>
+    </section>
+
+    <!-- Form & Studio Details Grid -->
+    <section class="contact-form-section" style="padding: 5rem 0 7rem; background: var(--color-soft-white); overflow: hidden;">
+      <div class="container">
+        <div class="contact-layout-grid" data-anim="contact-split">
+          <!-- Left: Salem Studio Details -->
+          <div class="contact-info-panel">
+            <div class="contact-detail-card">
+              <span class="badge badge-red" style="margin-bottom: 0.75rem;">Primary Studio</span>
+              <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Salem Atelier</h3>
+              <p style="font-size: 1rem; color: var(--color-charcoal-deep); line-height: 1.6; margin-bottom: 1rem;">
+                142 Washington Street, Suite 400<br>
+                Historic Architectural District<br>
+                Salem, Massachusetts 01970, USA
+              </p>
+              <div style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-red-primary);">
+                Coordinates: 42.5195° N, 70.8967° W
+              </div>
+            </div>
+
+            <div class="contact-detail-card">
+              <span class="badge badge-outline" style="margin-bottom: 0.75rem;">Direct Communication</span>
+              <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9375rem;">
+                <div>
+                  <strong style="display: block; color: var(--color-near-black); font-size: 0.8125rem; font-family: var(--font-mono); text-transform: uppercase;">Direct Studio Inquiries</strong>
+                  <a href="mailto:salem@stackly-studio.com" style="color: var(--color-red-primary); font-weight: 600;">salem@stackly-studio.com</a>
+                </div>
+                <div>
+                  <strong style="display: block; color: var(--color-near-black); font-size: 0.8125rem; font-family: var(--font-mono); text-transform: uppercase;">Telephone</strong>
+                  <a href="tel:+19787458800" style="color: var(--color-charcoal-deep);">+1 (978) 745-8800</a>
+                </div>
+                <div>
+                  <strong style="display: block; color: var(--color-near-black); font-size: 0.8125rem; font-family: var(--font-mono); text-transform: uppercase;">Media & Monographs</strong>
+                  <a href="mailto:press@stackly-studio.com" style="color: var(--color-charcoal-muted);">press@stackly-studio.com</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-detail-card">
+              <span class="badge badge-outline" style="margin-bottom: 0.75rem;">Atelier Hours</span>
+              <p style="font-size: 0.9375rem; color: var(--color-charcoal-deep); line-height: 1.6;">
+                <strong>Monday — Friday:</strong> 08:30 – 18:00 EST<br>
+                <strong>Saturday:</strong> By Private Appointment<br>
+                <strong>Sunday:</strong> Atelier Closed
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Validated Contact Form -->
+          <div class="contact-form-card">
+            <span class="eyebrow">Project Inquiry</span>
+            <h2 style="font-size: 2rem; margin-bottom: 1.75rem;">Submit Commission Brief</h2>
+
+            <form id="contact-inquiry-form" novalidate>
+              <div class="form-group-row">
+                <div class="form-group" id="group-name">
+                  <label class="form-label" for="contact-name">Your Full Name *</label>
+                  <input type="text" id="contact-name" class="form-input" placeholder="e.g. Lorde Harrington" required />
+                  <div class="form-error-line"></div>
+                  <span class="form-error-msg" id="msg-name">Please enter name</span>
+                </div>
+
+                <div class="form-group" id="group-email">
+                  <label class="form-label" for="contact-email">Email Address *</label>
+                  <input type="email" id="contact-email" class="form-input" placeholder="e.g. lorde@estate.com" required />
+                  <div class="form-error-line"></div>
+                  <span class="form-error-msg" id="msg-email">Please enter email</span>
+                </div>
+              </div>
+
+              <div class="form-group-row">
+                <div class="form-group" id="group-phone">
+                  <label class="form-label" for="contact-phone">Phone Number *</label>
+                  <input type="tel" id="contact-phone" class="form-input" placeholder="+1 (555) 000-0000" required />
+                  <div class="form-error-line"></div>
+                  <span class="form-error-msg" id="msg-phone">Please enter your phone number</span>
+                </div>
+
+                <div class="form-group" id="group-discipline">
+                  <label class="form-label" for="contact-discipline">Primary Discipline *</label>
+                  <select id="contact-discipline" class="form-input" required>
+                    <option value="Architecture">Full Architecture Practice</option>
+                    <option value="Interior Design">Interior Design & FF&E</option>
+                    <option value="Comprehensive">Comprehensive Architecture + Interior</option>
+                    <option value="Heritage">Heritage & Historic Restoration</option>
+                  </select>
+                  <div class="form-error-line"></div>
+                  <span class="form-error-msg" id="msg-discipline">Please select primary discipline</span>
+                </div>
+              </div>
+
+              <div class="form-group" id="group-location">
+                <label class="form-label" for="contact-location">Project Location & Estimated Budget *</label>
+                <input type="text" id="contact-location" class="form-input" placeholder="e.g. Salem MA / $5M - $10M" required />
+                <div class="form-error-line"></div>
+                <span class="form-error-msg" id="msg-location">Please enter project location & budget</span>
+              </div>
+
+              <div class="form-group" id="group-message">
+                <label class="form-label" for="contact-message">Project Vision & Timeline *</label>
+                <textarea id="contact-message" class="form-textarea" rows="4" placeholder="Describe your site, programmatic requirements, or timeline..." required></textarea>
+                <div class="form-error-line"></div>
+                <span class="form-error-msg" id="msg-message">Please enter project vision & timeline</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 1rem;">
+                <span>Transmit Commission Brief</span>
+                <span class="btn-icon">→</span>
+              </button>
+              <div id="contact-status-msg" class="contact-status-msg" style="display: none; margin-top: 1.25rem; padding: 1rem; border-radius: 4px; font-size: 0.9375rem; text-align: center;"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- SALEM INTERACTIVE ARCHITECTURAL MAP SECTION -->
+        <div class="salem-map-section">
+          <div class="salem-map-header">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div style="width: 10px; height: 10px; border-radius: 50%; background: var(--color-red-primary);"></div>
+              <span style="font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.15em;">SALEM ATELIER SATELLITE & SURVEY MAP</span>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: rgba(255,255,255,0.6);">
+              LAT 42.5195° N / LON -70.8967° W • ELEV 24 FT
+            </div>
+          </div>
+
+          <div class="salem-map-canvas-container" id="salem-map" style="position: relative; width: 100%; height: 460px;">
+            <iframe 
+              src="https://maps.google.com/maps?q=142%20Washington%20Street%2C%20Salem%2C%20MA%2001970&t=m&z=15&ie=UTF8&iwloc=&output=embed" 
+              width="100%" 
+              height="100%" 
+              style="border:0; width: 100%; height: 100%; display: block;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="STACKLY Salem Atelier Google Map Location">
+            </iframe>
+
+            <!-- Studio Pin Float Card -->
+            <div class="salem-studio-pin-card">
+              <span class="badge badge-red-solid" style="margin-bottom: 0.5rem;">Headquarters</span>
+              <h4 style="font-size: 1.15rem; margin-bottom: 0.25rem;">STACKLY Salem Atelier</h4>
+              <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.5; margin-bottom: 0.75rem;">
+                142 Washington Street, Suite 400<br>Salem, MA 01970
+              </p>
+              <a href="https://maps.google.com/?q=142+Washington+Street+Salem+MA+01970" target="_blank" rel="noopener noreferrer" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 700; text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem;">
+                Click to Navigate via Google Maps ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- NEW SECTION 1: Direct Consultation Engagement Options -->
+        <div style="margin-top: 6rem; padding-top: 5rem; border-top: 1px solid rgba(20,20,22,0.08); overflow: hidden;" class="consultation-options-section">
+          <div style="text-align: center; max-width: 650px; margin: 0 auto 3.5rem;">
+            <span class="eyebrow">Consultation Formats</span>
+            <h2>Choose Your Preferred Engagement Method</h2>
+            <p style="color: var(--color-charcoal-muted); font-size: 1rem; margin-top: 0.75rem;">
+              We offer three tailored consultation pathways to accommodate private individuals and institutional patrons globally.
+            </p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;" data-anim="consultation-diagonal-cards" class="consultation-options-grid">
+            <div class="consultation-option-card" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2.25rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: var(--shadow-subtle);">
+              <span class="badge badge-red" style="margin-bottom: 1rem;">Option 01</span>
+              <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">In-Person Salem Atelier Visit</h3>
+              <p style="font-size: 0.9375rem; color: var(--color-charcoal-muted); line-height: 1.65; margin-bottom: 1.25rem;">
+                Meet our founding partners at 142 Washington Street. Inspect physical stone & timber samples and view 1:1 VR spatial models.
+              </p>
+              <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-red-primary); font-weight: 600;">Mon–Fri • By Reservation</span>
+            </div>
+
+            <div class="consultation-option-card" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2.25rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: var(--shadow-subtle);">
+              <span class="badge badge-outline" style="margin-bottom: 1rem;">Option 02</span>
+              <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Digital 3D Interactive Review</h3>
+              <p style="font-size: 0.9375rem; color: var(--color-charcoal-muted); line-height: 1.65; margin-bottom: 1.25rem;">
+                Ideal for international clients. Stream high-fidelity BIM renderings and architectural massing walk-throughs in real-time.
+              </p>
+              <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-red-primary); font-weight: 600;">Global Timezones Accommodated</span>
+            </div>
+
+            <div class="consultation-option-card" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2.25rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: var(--shadow-subtle);">
+              <span class="badge badge-red" style="margin-bottom: 1rem;">Option 03</span>
+              <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">On-Site Topography Assessment</h3>
+              <p style="font-size: 0.9375rem; color: var(--color-charcoal-muted); line-height: 1.65; margin-bottom: 1.25rem;">
+                Our principal architects travel directly to your site location to evaluate solar orientation, soil conditions, and views.
+              </p>
+              <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-red-primary); font-weight: 600;">North America & Europe</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- NEW SECTION 2: Frequently Asked Questions (FAQ Accordion) -->
+        <div style="margin-top: 6rem; padding-top: 5rem; border-top: 1px solid rgba(20,20,22,0.08); overflow: hidden;" class="faq-section">
+          <div style="text-align: center; max-width: 650px; margin: 0 auto 3.5rem;">
+            <span class="eyebrow">Client Support</span>
+            <h2>Frequently Asked Questions</h2>
+            <p style="color: var(--color-charcoal-muted); font-size: 1rem; margin-top: 0.75rem;">
+              Clear answers regarding our commission process, architectural licensing, and project management.
+            </p>
+          </div>
+
+          <div class="faq-accordion-list" data-anim="faq-alternating">
+            <details class="faq-accordion-item">
+              <summary class="faq-accordion-summary">
+                <span>How do I initiate a new project commission with STACKLY?</span>
+                <span class="faq-icon-toggle">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </summary>
+              <div class="faq-accordion-content">
+                You can submit our confidential inquiry form above or contact our Salem Atelier directly at <a href="mailto:salem@stackly-studio.com" style="color: var(--color-red-primary); text-decoration: underline;">salem@stackly-studio.com</a>. Our principals review all proposals within 24 hours to schedule an initial consultation.
+              </div>
+            </details>
+
+            <details class="faq-accordion-item">
+              <summary class="faq-accordion-summary">
+                <span>What geographic regions does STACKLY service?</span>
+                <span class="faq-icon-toggle">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </summary>
+              <div class="faq-accordion-content">
+                While our headquarters and primary design lab are located in Salem, Massachusetts, STACKLY leads private residential and commercial commissions across North America, Europe, and Asia.
+              </div>
+            </details>
+
+            <details class="faq-accordion-item">
+              <summary class="faq-accordion-summary">
+                <span>How does STACKLY manage project timelines and construction budgets?</span>
+                <span class="faq-icon-toggle">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </summary>
+              <div class="faq-accordion-content">
+                We integrate building information modeling (BIM) with real-time contractor tendering and weekly milestone audits. Our project management team maintains militant oversight over general contractors to prevent cost overruns and delays.
+              </div>
+            </details>
+
+            <details class="faq-accordion-item">
+              <summary class="faq-accordion-summary">
+                <span>Can I schedule a private visit to the Salem Atelier?</span>
+                <span class="faq-icon-toggle">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </summary>
+              <div class="faq-accordion-content">
+                Yes, our Salem studio at 142 Washington Street welcomes prospective clients for private consultations, material gallery tours, and virtual reality walkthroughs Monday through Saturday by appointment.
+              </div>
+            </details>
+
+            <details class="faq-accordion-item">
+              <summary class="faq-accordion-summary">
+                <span>Does STACKLY provide turnkey interior design alongside architectural services?</span>
+                <span class="faq-icon-toggle">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </summary>
+              <div class="faq-accordion-content">
+                Yes, we specialize in unified architectural and interior creation. Our interior team handles custom joinery, rare stone sourcing, lighting control design, and full FF&E procurement to deliver a harmonized space.
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1.5rem;" aria-label="STACKLY Home">
+            <img src="assets/Logo11.webp" alt="STACKLY Architecture & Interiors" class="brand-logo-img" />
+          </a>
+          <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9375rem; max-width: 320px; line-height: 1.7; margin-bottom: 1.5rem;">
+            An international architecture and interior design atelier headquartered in Salem. Sculpting light, structural cantilever volumes, and sensory material landscapes.
+          </p>
+          <div style="display: flex; gap: 0.85rem; align-items: center;">
+            <a href="404.html" aria-label="Instagram" class="footer-social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="404.html" aria-label="LinkedIn" class="footer-social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="404.html" aria-label="Twitter / X" class="footer-social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+            </a>
+            <a href="404.html" aria-label="Pinterest" class="footer-social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.15 2.52 7.7 6.13 9.17-.08-.78-.15-1.98.03-2.83.17-.74 1.09-4.63 1.09-4.63s-.28-.56-.28-1.39c0-1.3.75-2.27 1.69-2.27.8 0 1.18.6 1.18 1.32 0 .8-.51 2.01-.78 3.12-.22.93.46 1.69 1.37 1.69 1.65 0 2.92-1.74 2.92-4.25 0-2.22-1.6-3.77-3.87-3.77-2.64 0-4.19 1.98-4.19 4.02 0 .8.31 1.65.69 2.12.08.09.09.18.06.3-.07.29-.23.93-.26 1.06-.04.18-.14.22-.33.13-1.23-.57-2-2.37-2-3.82 0-3.11 2.26-5.97 6.52-5.97 3.42 0 6.08 2.44 6.08 5.7 0 3.4-2.14 6.13-5.12 6.13-1 0-1.94-.52-2.26-1.13l-.62 2.36c-.22.86-.83 1.94-1.24 2.6 1.13.35 2.34.54 3.59.54 5.52 0 10-4.48 10-10S17.52 2 12 2z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Explore</h4>
+          <ul class="footer-links-list">
+            <li><a href="404.html">Featured Projects</a></li>
+            <li><a href="404.html">Architecture Practice</a></li>
+            <li><a href="404.html">Interior Design Atelier</a></li>
+            <li><a href="404.html">Our 6-Step Process</a></li>
+            <li><a href="404.html">Studio Command Center</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Salem Studio</h4>
+          <div style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.9375rem; color: rgba(255,255,255,0.75);">
+            <div>
+              <strong style="color: var(--color-pure-white); display: block;">Address</strong>
+              142 Washington Street, Suite 400<br>Historic District, Salem, MA 01970
+            </div>
+            <div>
+              <strong style="color: var(--color-pure-white); display: block;">Direct Inquiries</strong>
+              <a href="mailto:salem@stackly-studio.com" style="color: var(--color-red-primary);">salem@stackly-studio.com</a><br>
+              +1 (978) 745-8800
+            </div>
+            <div>
+              <strong style="color: var(--color-pure-white); display: block;">Studio Hours</strong>
+              Monday – Friday: 08:30 – 18:00 EST<br>
+              Saturday: By Appointment Only
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © 2026 STACKLY Architecture & Interior Design. All rights reserved.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="404.html">Confidentiality Protocol</a>
+          <a href="404.html">Terms of Practice</a>
+          <a href="404.html">Architectural Licensing</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Motion & Animation System -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/motion.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

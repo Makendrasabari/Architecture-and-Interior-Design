@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; } window.scrollTo(0, 0);</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Registration — STACKLY Studio</title>
+  <meta name="description" content="Create your STACKLY client account to collaborate on architectural commissions, view CAD documents, and manage project schedules." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/Logo11.webp" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Pure CSS Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+  <link rel="stylesheet" href="css/motion.css" />
+</head>
+<body class="theme-light">
+  <!-- Custom Cursor -->
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring">
+      <span class="cursor-text">ENTER</span>
+    </div>
+  </div>
+
+  <div class="auth-split-screen">
+    <!-- Left Visual Pane -->
+    <div class="auth-visual-pane">
+      <img 
+        src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80" 
+        alt="Interior Atelier Space" 
+        class="auth-visual-bg"
+      />
+      <div class="auth-visual-overlay"></div>
+
+      <div class="auth-visual-header">
+        <a href="index.html" class="brand-logo" aria-label="STACKLY Home">
+          <img src="assets/Logo11.webp" alt="STACKLY Architecture & Interiors" class="brand-logo-img" />
+        </a>
+      </div>
+
+      <div class="auth-visual-quote">
+        <p class="auth-quote-text">
+          "We construct environments that endure beyond generations."
+        </p>
+        <span class="auth-quote-author">— STACKLY Monograph Series</span>
+      </div>
+
+      <div class="auth-visual-footer">
+        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: rgba(255,255,255,0.6); letter-spacing: 0.1em;">
+          CLIENT ONBOARDING • SALEM HQ
+        </span>
+      </div>
+    </div>
+
+    <!-- Right Form Pane -->
+    <div class="auth-form-pane">
+      <div class="auth-form-wrapper">
+        <a href="index.html" class="auth-back-link">
+          <span>Back to Home</span>
+        </a>
+
+        <div class="auth-brand-center">
+          <a href="index.html" class="brand-logo" aria-label="STACKLY Home">
+            <img src="assets/Logo11.webp" alt="STACKLY Architecture & Interiors" class="brand-logo-img" />
+          </a>
+        </div>
+
+        <div class="auth-form-header">
+          <h1 class="auth-form-title">Create an Account</h1>
+          <p class="auth-form-desc">Register to unlock the Architecture & Interior Design Command Centers.</p>
+        </div>
+
+        <form id="signup-form" class="auth-form" novalidate>
+          <div class="auth-field" id="signup-field-name">
+            <label for="signup-name">Full Name / Patron Name</label>
+            <div class="auth-input-wrapper">
+              <input type="text" id="signup-name" class="auth-input" placeholder="e.g. Helena Vance" required />
+            </div>
+            <span class="auth-field-error">Please enter your full name.</span>
+          </div>
+
+          <div class="auth-field" id="signup-field-email">
+            <label for="signup-email">Direct Email Address</label>
+            <div class="auth-input-wrapper">
+              <input type="email" id="signup-email" class="auth-input" placeholder="name@gmail.com" required />
+            </div>
+            <span class="auth-field-error">Email must be a valid @gmail.com address.</span>
+          </div>
+
+          <div class="auth-field" id="signup-field-password">
+            <label for="signup-password">Create Password</label>
+            <div class="auth-input-wrapper">
+              <input type="password" id="signup-password" class="auth-input" placeholder="Enter Password" required />
+            </div>
+            <span class="auth-field-error">Please enter password.</span>
+          </div>
+
+          <div class="auth-field" id="signup-field-confirm-password">
+            <label for="signup-confirm-password">Confirm Password</label>
+            <div class="auth-input-wrapper">
+              <input type="password" id="signup-confirm-password" class="auth-input" placeholder="Confirm Password" required />
+            </div>
+            <span class="auth-field-error">Passwords do not match.</span>
+          </div>
+
+          <div class="auth-options-row">
+            <label class="remember-me-label">
+              <input type="checkbox" id="signup-terms" class="remember-checkbox" checked required />
+              <span>Agree to Atelier Confidentiality Protocol</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 0.5rem;">
+            <span>Create Studio Account</span>
+            <span class="btn-icon">→</span>
+          </button>
+        </form>
+
+        <p class="auth-switch-text">
+          Already registered? 
+          <a href="login.html" class="auth-switch-link">Sign In to Atelier</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Motion & Animation Engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/motion.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

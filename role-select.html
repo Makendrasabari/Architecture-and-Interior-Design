@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; } window.scrollTo(0, 0);</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Select Command Studio — STACKLY Architecture & Interior Design</title>
+  <meta name="description" content="Select your discipline to access the STACKLY Architecture Studio Command Center or Interior Design Studio Command Center." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/Logo11.webp" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Pure CSS Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+</head>
+<body class="theme-dark">
+  <!-- Custom Cursor -->
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring">
+      <span class="cursor-text">SELECT</span>
+    </div>
+  </div>
+
+  <div class="role-select-screen">
+    <!-- Top Header -->
+    <div class="role-select-header">
+      <a href="index.html" class="brand-logo" style="margin-bottom: 2rem;" aria-label="STACKLY Home">
+        <img src="assets/Logo11.webp" alt="STACKLY Architecture & Interiors" class="brand-logo-img" />
+      </a>
+
+      <span class="eyebrow" style="color: var(--color-red-primary);">Studio Command Portal</span>
+      <h1 style="color: var(--color-pure-white); font-size: clamp(2.5rem, 4.5vw, 3.75rem); margin-bottom: 1rem;">Select Your Discipline</h1>
+      <p style="color: rgba(255,255,255,0.7); font-size: 1.125rem;">
+        Choose your studio command environment to manage ongoing commissions, blueprints, analytics, or material moodboards.
+      </p>
+    </div>
+
+    <div class="role-cards-grid">
+      <!-- 01 ARCHITECTURE CARD -->
+      <div class="role-card" id="select-architecture-role" data-role="architecture">
+        <img 
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" 
+          alt="Architecture Command" 
+          class="role-card-bg"
+        />
+        <div class="role-card-overlay"></div>
+
+        <div class="role-top-meta">
+          <span class="role-number">01</span>
+          <span class="role-badge">Macro Structural</span>
+        </div>
+
+        <div class="role-bottom-content">
+          <h2 class="role-title">Architecture Studio</h2>
+          <p class="role-desc">
+            Manage master site planning, structural cantilever engineering, active building permits, interactive floor plans, and budget analytics.
+          </p>
+          <div class="role-action-btn">
+            <span>Enter Architecture Command</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 INTERIOR DESIGN CARD -->
+      <div class="role-card" id="select-interior-role" data-role="interior">
+        <img 
+          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80" 
+          alt="Interior Design Command" 
+          class="role-card-bg"
+        />
+        <div class="role-card-overlay"></div>
+
+        <div class="role-top-meta">
+          <span class="role-number">02</span>
+          <span class="role-badge">Micro Spatial</span>
+        </div>
+
+        <div class="role-bottom-content">
+          <h2 class="role-title">Interior Design Studio</h2>
+          <p class="role-desc">
+            Curate bespoke tactile moodboards, physical stone & timber libraries, FF&E procurement schedules, and interior progress reports.
+          </p>
+          <div class="role-action-btn">
+            <span>Enter Interior Command</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 3.5rem; z-index: 2;">
+      <a href="index.html" class="btn btn-outline-white btn-sm">
+        <span>← Return to Public Portfolio</span>
+      </a>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

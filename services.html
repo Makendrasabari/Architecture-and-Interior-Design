@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
+    try {
+      if (sessionStorage.getItem('stackly_returning_from_404') === 'true' && sessionStorage.getItem('stackly_saved_scroll')) {
+        var _savedY = parseInt(sessionStorage.getItem('stackly_saved_scroll'), 10);
+        if (!isNaN(_savedY)) { window.scrollTo(0, _savedY); }
+      } else {
+        window.scrollTo(0, 0);
+      }
+    } catch (e) { window.scrollTo(0, 0); }
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Practice & Disciplines — STACKLY Architecture & Interior Design</title>
+  <meta name="description" content="Explore the comprehensive spatial disciplines of STACKLY Studio: Architecture, Interior Design, Space Planning, 3D CGI, Landscape Architecture, and Turnkey Project Management." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/Logo11.webp" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Pure CSS Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/motion.css" />
+</head>
+<body class="theme-light">
+  <!-- Custom Cursor -->
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring">
+      <span class="cursor-text">EXPLORE</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-navbar nav-dark nav-transparent" id="site-header">
+    <div class="navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="STACKLY Home">
+        <img src="assets/Logo11.webp" alt="STACKLY Architecture & Interiors" class="brand-logo-img" />
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link active">Services</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar-actions">
+        <a href="login.html" class="btn btn-primary btn-sm">
+          <span>Login</span>
+          <span class="btn-icon">→</span>
+        </a>
+
+        <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="STACKLY Home">
+        <img src="assets/Logo11.webp" alt="STACKLY Architecture & Interiors" class="brand-logo-img" style="height: 38px; width: auto;" />
+      </a>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About</a></li>
+      <li><a href="services.html" class="mobile-nav-link active">Services</a></li>
+      <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-actions">
+      <a href="login.html" class="btn btn-primary" style="width: 100%; max-width: 240px; justify-content: center;">
+        <span>Login</span>
+        <span class="btn-icon">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="page-view services-page">
+    <!-- Services Hero -->
+    <section class="page-hero">
+      <img 
+        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=85" 
+        alt="STACKLY Architectural and Interior Capabilities" 
+        class="page-hero-bg"
+      />
+      <div class="page-hero-overlay"></div>
+      <div class="container page-hero-content">
+        <span class="eyebrow" data-anim="text-reveal">Our Disciplines</span>
+        <h1 data-anim="text-reveal" class="page-hero-title">
+          <span class="hero-title-main">Holistic Architectural</span>
+          <span class="hero-title-accent">& Spatial Capabilities.</span>
+        </h1>
+        <p data-anim="text-reveal">
+          From the macro scale of master planning and cantilevered structural concrete down to the micro scale of custom joinery and patinated metal hardware.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Comprehensive List -->
+    <section style="padding: 6rem 0; background: var(--color-soft-white);">
+      <div class="container">
+        <div style="display: flex; flex-direction: column; gap: 4rem;">
+          <!-- 01 Architecture -->
+          <div class="service-detail-block" id="architecture" style="background: var(--color-pure-white); border-radius: var(--radius-sm); border: 1px solid rgba(20, 20, 22, 0.08); overflow: hidden; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 0; box-shadow: var(--shadow-subtle);">
+            <div style="padding: clamp(2rem, 4vw, 4rem); display: flex; flex-direction: column; justify-content: center;">
+              <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
+                <span style="font-family: var(--font-mono); font-size: 1.5rem; font-weight: 800; color: var(--color-red-primary);">01</span>
+                <span style="height: 1px; width: 40px; background: var(--color-red-primary);"></span>
+                <span class="badge badge-red">Core Practice</span>
+              </div>
+              <h2 style="font-size: 2.25rem; margin-bottom: 1rem;">Architecture</h2>
+              <p style="font-size: 1.0625rem; line-height: 1.75; color: var(--color-charcoal-muted); margin-bottom: 2rem;">
+                From private luxury residences to commercial headquarters, our architectural practice synthesizes site specificity, structural innovation, and timeless aesthetics. Every line drawn is calibrated for light, thermal performance, and human experience.
+              </p>
+              
+              <div style="margin-bottom: 2.5rem;">
+                <h4 style="font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-charcoal-deep); margin-bottom: 1rem;">Key Scope & Deliverables</h4>
+                <ul style="list-style: none; display: grid; grid-template-columns: 1fr; gap: 0.65rem;">
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Site Analysis & Feasibility Studies</span>
+                  </li>
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Conceptual & Schematic Design</span>
+                  </li>
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Structural Engineering Coordination</span>
+                  </li>
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Permitting & Building Code Compliance</span>
+                  </li>
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Detailed Construction Documentation</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <a href="404.html" class="btn btn-primary">
+                  <span>Inquire for Architecture</span>
+                  <span class="btn-icon">→</span>
+                </a>
+              </div>
+            </div>
+
+            <div style="position: relative; min-height: 400px;">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Architecture Practice" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- 02 Interior Design -->
+          <div class="service-detail-block" id="interior-design" style="background: var(--color-pure-white); border-radius: var(--radius-sm); border: 1px solid rgba(20, 20, 22, 0.08); overflow: hidden; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 0; box-shadow: var(--shadow-subtle);">
+            <div style="position: relative; min-height: 400px;">
+              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Interior Design" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
+            </div>
+
+            <div style="padding: clamp(2rem, 4vw, 4rem); display: flex; flex-direction: column; justify-content: center;">
+              <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
+                <span style="font-family: var(--font-mono); font-size: 1.5rem; font-weight: 800; color: var(--color-red-primary);">02</span>
+                <span style="height: 1px; width: 40px; background: var(--color-red-primary);"></span>
+                <span class="badge badge-red">Core Practice</span>
+              </div>
+              <h2 style="font-size: 2.25rem; margin-bottom: 1rem;">Interior Design</h2>
+              <p style="font-size: 1.0625rem; line-height: 1.75; color: var(--color-charcoal-muted); margin-bottom: 2rem;">
+                We treat interior spaces as intimate architectural volumes. Our interior design atelier sources rare natural stones, hand-finished timbers, patinated bronzes, and custom furniture to curate cohesive sensory landscapes.
+              </p>
+              
+              <div style="margin-bottom: 2.5rem;">
+                <h4 style="font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-charcoal-deep); margin-bottom: 1rem;">Key Scope & Deliverables</h4>
+                <ul style="list-style: none; display: grid; grid-template-columns: 1fr; gap: 0.65rem;">
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Interior Architectural Detailing</span>
+                  </li>
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Custom Millwork & Joinery Design</span>
+                  </li>
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>FF&E Procurement & Sourcing</span>
+                  </li>
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Bespoke Lighting Design & Controls</span>
+                  </li>
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Textile & Material Curation</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <a href="404.html" class="btn btn-primary">
+                  <span>Inquire for Interior Design</span>
+                  <span class="btn-icon">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 03 Space Planning -->
+          <div class="service-detail-block" id="space-planning" style="background: var(--color-pure-white); border-radius: var(--radius-sm); border: 1px solid rgba(20, 20, 22, 0.08); overflow: hidden; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 0; box-shadow: var(--shadow-subtle);">
+            <div style="padding: clamp(2rem, 4vw, 4rem); display: flex; flex-direction: column; justify-content: center;">
+              <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
+                <span style="font-family: var(--font-mono); font-size: 1.5rem; font-weight: 800; color: var(--color-red-primary);">03</span>
+                <span style="height: 1px; width: 40px; background: var(--color-red-primary);"></span>
+                <span class="badge badge-red">Core Practice</span>
+              </div>
+              <h2 style="font-size: 2.25rem; margin-bottom: 1rem;">Space Planning</h2>
+              <p style="font-size: 1.0625rem; line-height: 1.75; color: var(--color-charcoal-muted); margin-bottom: 2rem;">
+                Spatial choreography is the soul of architecture. We dissect human movement, acoustic requirements, and functional adjacencies to craft floor plans that feel effortlessly intuitive, expansive, and tailored.
+              </p>
+              
+              <div style="margin-bottom: 2.5rem;">
+                <h4 style="font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-charcoal-deep); margin-bottom: 1rem;">Key Scope & Deliverables</h4>
+                <ul style="list-style: none; display: grid; grid-template-columns: 1fr; gap: 0.65rem;">
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Circulation & Flow Optimization</span>
+                  </li>
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Zoning: Public, Private & Service</span>
+                  </li>
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Ergonomic Proportions & Clearances</span>
+                  </li>
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Flexible Modular Space Planning</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <a href="404.html" class="btn btn-primary">
+                  <span>Inquire for Space Planning</span>
+                  <span class="btn-icon">→</span>
+                </a>
+              </div>
+            </div>
+
+            <div style="position: relative; min-height: 400px;">
+              <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80" alt="Space Planning" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- 04 3D Visualization -->
+          <div class="service-detail-block" id="3d-visualization" style="background: var(--color-pure-white); border-radius: var(--radius-sm); border: 1px solid rgba(20, 20, 22, 0.08); overflow: hidden; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 0; box-shadow: var(--shadow-subtle);">
+            <div style="position: relative; min-height: 400px;">
+              <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="3D CGI" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
+            </div>
+
+            <div style="padding: clamp(2rem, 4vw, 4rem); display: flex; flex-direction: column; justify-content: center;">
+              <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
+                <span style="font-family: var(--font-mono); font-size: 1.5rem; font-weight: 800; color: var(--color-red-primary);">04</span>
+                <span style="height: 1px; width: 40px; background: var(--color-red-primary);"></span>
+                <span class="badge badge-red">Core Practice</span>
+              </div>
+              <h2 style="font-size: 2.25rem; margin-bottom: 1rem;">3D Visualization</h2>
+              <p style="font-size: 1.0625rem; line-height: 1.75; color: var(--color-charcoal-muted); margin-bottom: 2rem;">
+                Using cutting-edge ray-traced rendering and real-time architectural game engines, we bring unbuilt visions to life. Experience physical daylight studies, material texture interaction, and cinematic fly-throughs prior to ground-breaking.
+              </p>
+              
+              <div style="margin-bottom: 2.5rem;">
+                <h4 style="font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-charcoal-deep); margin-bottom: 1rem;">Key Scope & Deliverables</h4>
+                <ul style="list-style: none; display: grid; grid-template-columns: 1fr; gap: 0.65rem;">
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Hyper-Realistic Architectural Renders</span>
+                  </li>
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Atmospheric Lighting & Day/Night Studies</span>
+                  </li>
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Material & Texture Digital Mockups</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <a href="404.html" class="btn btn-primary">
+                  <span>Inquire for 3D CGI</span>
+                  <span class="btn-icon">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 05 Landscape Design -->
+          <div class="service-detail-block" id="landscape-design" style="background: var(--color-pure-white); border-radius: var(--radius-sm); border: 1px solid rgba(20, 20, 22, 0.08); overflow: hidden; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 0; box-shadow: var(--shadow-subtle);">
+            <div style="padding: clamp(2rem, 4vw, 4rem); display: flex; flex-direction: column; justify-content: center;">
+              <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
+                <span style="font-family: var(--font-mono); font-size: 1.5rem; font-weight: 800; color: var(--color-red-primary);">05</span>
+                <span style="height: 1px; width: 40px; background: var(--color-red-primary);"></span>
+                <span class="badge badge-red">Core Practice</span>
+              </div>
+              <h2 style="font-size: 2.25rem; margin-bottom: 1rem;">Landscape Design</h2>
+              <p style="font-size: 1.0625rem; line-height: 1.75; color: var(--color-charcoal-muted); margin-bottom: 2rem;">
+                Our landscape architecture connects indoor living rooms directly to the open sky. We sculpt infinity water features, xeriscape stone gardens, terraced outdoor living pavilions, and native flora ecosystems.
+              </p>
+              
+              <div style="margin-bottom: 2.5rem;">
+                <h4 style="font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-charcoal-deep); margin-bottom: 1rem;">Key Scope & Deliverables</h4>
+                <ul style="list-style: none; display: grid; grid-template-columns: 1fr; gap: 0.65rem;">
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Architectural Hardscape Design</span>
+                  </li>
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Pool, Spa & Water Feature Engineering</span>
+                  </li>
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Exterior Architectural Illumination</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <a href="404.html" class="btn btn-primary">
+                  <span>Inquire for Landscape</span>
+                  <span class="btn-icon">→</span>
+                </a>
+              </div>
+            </div>
+
+            <div style="position: relative; min-height: 400px;">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Landscape Architecture" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- 06 Project Management -->
+          <div class="service-detail-block" id="project-management" style="background: var(--color-pure-white); border-radius: var(--radius-sm); border: 1px solid rgba(20, 20, 22, 0.08); overflow: hidden; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 0; box-shadow: var(--shadow-subtle);">
+            <div style="position: relative; min-height: 400px;">
+              <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Project Management" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
+            </div>
+
+            <div style="padding: clamp(2rem, 4vw, 4rem); display: flex; flex-direction: column; justify-content: center;">
+              <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
+                <span style="font-family: var(--font-mono); font-size: 1.5rem; font-weight: 800; color: var(--color-red-primary);">06</span>
+                <span style="height: 1px; width: 40px; background: var(--color-red-primary);"></span>
+                <span class="badge badge-red">Core Practice</span>
+              </div>
+              <h2 style="font-size: 2.25rem; margin-bottom: 1rem;">Project Management</h2>
+              <p style="font-size: 1.0625rem; line-height: 1.75; color: var(--color-charcoal-muted); margin-bottom: 2rem;">
+                From initial ground-breaking to white-glove handover, our studio directs general contractors, craftsmen, and specialty consultants with militant attention to detail, maintaining timeline precision and budget fidelity.
+              </p>
+              
+              <div style="margin-bottom: 2.5rem;">
+                <h4 style="font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-charcoal-deep); margin-bottom: 1rem;">Key Scope & Deliverables</h4>
+                <ul style="list-style: none; display: grid; grid-template-columns: 1fr; gap: 0.65rem;">
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Contractor Tendering & Evaluation</span>
+                  </li>
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Schedule & Milestone Tracking</span>
+                  </li>
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>On-Site Construction Administration</span>
+                  </li>
+                  <li style="font-size: 0.9375rem; color: var(--color-charcoal-deep); display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-red-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Turnkey Handover & Commissioning</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <a href="404.html" class="btn btn-primary">
+                  <span>Inquire for Management</span>
+                  <span class="btn-icon">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8-Phase Execution Protocol -->
+    <section class="stages-section" style="padding: 6.5rem 0; background: var(--color-pure-white); overflow: hidden;">
+      <div class="container">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 4rem;">
+          <span class="eyebrow">Precision Methodology</span>
+          <h2>Our 8-Step Execution Protocol</h2>
+          <p style="color: var(--color-charcoal-muted); font-size: 1.0625rem; line-height: 1.7; margin-top: 1rem;">
+            From initial site topography analysis down to generational facility stewardship, every commission is executed with absolute technical clarity.
+          </p>
+        </div>
+
+        <div class="stages-grid">
+          <!-- Stage 01 -->
+          <div class="stage-flip-card">
+            <div class="stage-flip-card-inner">
+              <div class="stage-card-front">
+                <div class="stage-card-header">
+                  <span class="stage-number">STAGE 01</span>
+                  <span class="badge badge-outline">Brief &amp; Site</span>
+                </div>
+                <h3 class="stage-title">Site Analysis &amp; Topography</h3>
+                <p class="stage-desc">
+                  Environmental solar mapping, micro-climate analysis, municipal zoning evaluation, and soil geotechnical audits.
+                </p>
+                <div class="stage-flip-hint">
+                  <span>Hover to flip &amp; inspect</span>
+                  <span>↻</span>
+                </div>
+              </div>
+              <div class="stage-card-back">
+                <span class="stage-back-badge">Phase 01 Deliverables</span>
+                <h4 class="stage-back-heading">Key Scope &amp; Milestones</h4>
+                <ul class="stage-back-list">
+                  <li>LiDAR Topographical Scanning</li>
+                  <li>Geotechnical Soil Stratification</li>
+                  <li>Solar Insolation &amp; Wind Simulation</li>
+                </ul>
+                <div class="stage-back-status">
+                  <span class="dot"></span>
+                  <span>Prerequisite for Schematic Phase</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 02 -->
+          <div class="stage-flip-card">
+            <div class="stage-flip-card-inner">
+              <div class="stage-card-front">
+                <div class="stage-card-header">
+                  <span class="stage-number">STAGE 02</span>
+                  <span class="badge badge-outline">Schematic</span>
+                </div>
+                <h3 class="stage-title">Volumetric 3D CGI Modeling</h3>
+                <p class="stage-desc">
+                  Developing spatial proportions, physical 3D study models, photorealistic CGI renderings, and spatial flow studies.
+                </p>
+                <div class="stage-flip-hint">
+                  <span>Hover to flip &amp; inspect</span>
+                  <span>↻</span>
+                </div>
+              </div>
+              <div class="stage-card-back">
+                <span class="stage-back-badge">Phase 02 Deliverables</span>
+                <h4 class="stage-back-heading">Key Scope &amp; Milestones</h4>
+                <ul class="stage-back-list">
+                  <li>Parametric Massing Iterations</li>
+                  <li>Physical 1:50 Timber Study Model</li>
+                  <li>8K Photorealistic CGI Renderings</li>
+                </ul>
+                <div class="stage-back-status">
+                  <span class="dot"></span>
+                  <span>Client Concept Sign-Off</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 03 -->
+          <div class="stage-flip-card">
+            <div class="stage-flip-card-inner">
+              <div class="stage-card-front">
+                <div class="stage-card-header">
+                  <span class="stage-number">STAGE 03</span>
+                  <span class="badge badge-outline">Engineering</span>
+                </div>
+                <h3 class="stage-title">Structural &amp; Envelope Detail</h3>
+                <p class="stage-desc">
+                  Post-tensioned cantilever calculations, thermal break glazing engineering, and full municipal permit documentation.
+                </p>
+                <div class="stage-flip-hint">
+                  <span>Hover to flip &amp; inspect</span>
+                  <span>↻</span>
+                </div>
+              </div>
+              <div class="stage-card-back">
+                <span class="stage-back-badge">Phase 03 Deliverables</span>
+                <h4 class="stage-back-heading">Key Scope &amp; Milestones</h4>
+                <ul class="stage-back-list">
+                  <li>Post-Tensioned Structural Calculations</li>
+                  <li>Facade Thermal Break Engineering</li>
+                  <li>Municipal Permit Set &amp; Stamp</li>
+                </ul>
+                <div class="stage-back-status">
+                  <span class="dot"></span>
+                  <span>Regulatory Authority Approval</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 04 -->
+          <div class="stage-flip-card">
+            <div class="stage-flip-card-inner">
+              <div class="stage-card-front">
+                <div class="stage-card-header">
+                  <span class="stage-number">STAGE 04</span>
+                  <span class="badge badge-outline">Interiors</span>
+                </div>
+                <h3 class="stage-title">Joinery &amp; Material Curation</h3>
+                <p class="stage-desc">
+                  Bespoke cabinetry drafting, marble quarry selection, lighting control schematics, and custom furniture procurement.
+                </p>
+                <div class="stage-flip-hint">
+                  <span>Hover to flip &amp; inspect</span>
+                  <span>↻</span>
+                </div>
+              </div>
+              <div class="stage-card-back">
+                <span class="stage-back-badge">Phase 04 Deliverables</span>
+                <h4 class="stage-back-heading">Key Scope &amp; Milestones</h4>
+                <ul class="stage-back-list">
+                  <li>Quarry Stone Extraction Slabbing</li>
+                  <li>Custom Millwork Workshop Drawings</li>
+                  <li>Circadian Luminaire Schedule</li>
+                </ul>
+                <div class="stage-back-status">
+                  <span class="dot"></span>
+                  <span>Procurement Specification Complete</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 05 -->
+          <div class="stage-flip-card">
+            <div class="stage-flip-card-inner">
+              <div class="stage-card-front">
+                <div class="stage-card-header">
+                  <span class="stage-number">STAGE 05</span>
+                  <span class="badge badge-outline">Fabrication</span>
+                </div>
+                <h3 class="stage-title">Prefabrication &amp; Mockup Testing</h3>
+                <p class="stage-desc">
+                  1:1 architectural facade prototypes, acoustic laboratory testing, robotic timber fabrication, and millwork dry-fits.
+                </p>
+                <div class="stage-flip-hint">
+                  <span>Hover to flip &amp; inspect</span>
+                  <span>↻</span>
+                </div>
+              </div>
+              <div class="stage-card-back">
+                <span class="stage-back-badge">Phase 05 Deliverables</span>
+                <h4 class="stage-back-heading">Key Scope &amp; Milestones</h4>
+                <ul class="stage-back-list">
+                  <li>1:1 Scale Facade Enclosure Mockup</li>
+                  <li>Robotic CNC Joinery Dry-Assembly</li>
+                  <li>Acoustic Chamber Decibel Testing</li>
+                </ul>
+                <div class="stage-back-status">
+                  <span class="dot"></span>
+                  <span>Quality Assurance Verification</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 06 -->
+          <div class="stage-flip-card">
+            <div class="stage-flip-card-inner">
+              <div class="stage-card-front">
+                <div class="stage-card-header">
+                  <span class="stage-number">STAGE 06</span>
+                  <span class="badge badge-outline">Construction</span>
+                </div>
+                <h3 class="stage-title">Site Oversight &amp; Administration</h3>
+                <p class="stage-desc">
+                  On-site weekly principal inspections, contractor tolerance verifications, and strict milestone schedule audits.
+                </p>
+                <div class="stage-flip-hint">
+                  <span>Hover to flip &amp; inspect</span>
+                  <span>↻</span>
+                </div>
+              </div>
+              <div class="stage-card-back">
+                <span class="stage-back-badge">Phase 06 Deliverables</span>
+                <h4 class="stage-back-heading">Key Scope &amp; Milestones</h4>
+                <ul class="stage-back-list">
+                  <li>Weekly Principal On-Site Audits</li>
+                  <li>Contractor Laser Tolerance Verification</li>
+                  <li>Schedule &amp; Milestone Tracking</li>
+                </ul>
+                <div class="stage-back-status">
+                  <span class="dot"></span>
+                  <span>Active Construction Supervision</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 07 -->
+          <div class="stage-flip-card">
+            <div class="stage-flip-card-inner">
+              <div class="stage-card-front">
+                <div class="stage-card-header">
+                  <span class="stage-number">STAGE 07</span>
+                  <span class="badge badge-outline">Handover</span>
+                </div>
+                <h3 class="stage-title">White-Glove Commissioning</h3>
+                <p class="stage-desc">
+                  Complete building systems commissioning, operational user manuals, art placement, and long-term maintenance protocols.
+                </p>
+                <div class="stage-flip-hint">
+                  <span>Hover to flip &amp; inspect</span>
+                  <span>↻</span>
+                </div>
+              </div>
+              <div class="stage-card-back">
+                <span class="stage-back-badge">Phase 07 Deliverables</span>
+                <h4 class="stage-back-heading">Key Scope &amp; Milestones</h4>
+                <ul class="stage-back-list">
+                  <li>MEP HVAC Airflow Balancing</li>
+                  <li>Smart Home Automation Calibration</li>
+                  <li>Curated Art &amp; Furniture Placement</li>
+                </ul>
+                <div class="stage-back-status">
+                  <span class="dot"></span>
+                  <span>Operational Handover Certified</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 08 -->
+          <div class="stage-flip-card">
+            <div class="stage-flip-card-inner">
+              <div class="stage-card-front">
+                <div class="stage-card-header">
+                  <span class="stage-number">STAGE 08</span>
+                  <span class="badge badge-outline">Stewardship</span>
+                </div>
+                <h3 class="stage-title">Post-Occupancy &amp; Stewardship</h3>
+                <p class="stage-desc">
+                  Circadian lighting optimization, seasonal thermal performance monitoring, and generational facility stewardship.
+                </p>
+                <div class="stage-flip-hint">
+                  <span>Hover to flip &amp; inspect</span>
+                  <span>↻</span>
+                </div>
+              </div>
+              <div class="stage-card-back">
+                <span class="stage-back-badge">Phase 08 Deliverables</span>
+                <h4 class="stage-back-heading">Key Scope &amp; Milestones</h4>
+                <ul class="stage-back-list">
+                  <li>12-Month Environmental Auditing</li>
+                  <li>Thermal Envelope Efficiency Review</li>
+                  <li>Generational Maintenance Protocols</li>
+                </ul>
+                <div class="stage-back-status">
+                  <span class="dot"></span>
+                  <span>Ongoing Atelier Stewardship</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION 2: Project Typologies & Specialized Scope -->
+    <section class="typologies-section" style="padding: 6.5rem 0; background: var(--color-off-white); border-top: 1px solid rgba(20,20,22,0.06);">
+      <div class="container">
+        <div style="margin-bottom: 4rem;">
+          <span class="eyebrow">Tailored Solutions</span>
+          <h2>Specialized Scope Across Typologies</h2>
+        </div>
+
+        <div class="typologies-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
+          <div class="typology-card" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2.5rem; border-top: 4px solid var(--color-red-primary); box-shadow: var(--shadow-subtle);">
+            <span class="badge badge-red" style="margin-bottom: 1.25rem;">Residential</span>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Private Luxury Estates</h3>
+            <p style="font-size: 0.9375rem; color: var(--color-charcoal-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+              Custom cliffside villas, coastal compound masterplans, mountain sanctuaries, and urban penthouses engineered for privacy and longevity.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--color-charcoal-deep); font-family: var(--font-mono);">
+              <li>5,000 to 25,000+ sq ft Residences</li>
+              <li>Integrated Smart Automation</li>
+              <li>Custom Subterranean Garages</li>
+            </ul>
+          </div>
+
+          <div class="typology-card" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2.5rem; border-top: 4px solid var(--color-near-black); box-shadow: var(--shadow-subtle);">
+            <span class="badge badge-outline" style="margin-bottom: 1.25rem;">Commercial</span>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Hospitality & Corporate</h3>
+            <p style="font-size: 0.9375rem; color: var(--color-charcoal-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+              Boutique luxury hotels, Michelin-caliber dining spaces, private family office headquarters, and high-end luxury retail flagships.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--color-charcoal-deep); font-family: var(--font-mono);">
+              <li>Brand Identity Spatial Translation</li>
+              <li>High-Traffic Acoustic Dampening</li>
+              <li>LEED Platinum Environmental Spec</li>
+            </ul>
+          </div>
+
+          <div class="typology-card" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2.5rem; border-top: 4px solid var(--color-red-primary); box-shadow: var(--shadow-subtle);">
+            <span class="badge badge-red" style="margin-bottom: 1.25rem;">Heritage</span>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Adaptive Reuse & Historic</h3>
+            <p style="font-size: 0.9375rem; color: var(--color-charcoal-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+              Preserving historical architectural fabric while seamlessly embedding ultra-modern cantilevered glass and steel interventions.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--color-charcoal-deep); font-family: var(--font-mono);">
+              <li>Historic Preservation Board Permits</li>
+              <li>Masonry Restorations & Structural Retrofits</li>
+              <li>Contemporary Pavilion Annexes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section style="padding: 6rem 0; background: var(--color-near-black); color: var(--color-pure-white);">
+      <div class="container" style="text-align: center; max-width: 700px; margin-inline: auto;">
+        <span class="eyebrow" style="color: var(--color-red-primary);">Initiate A Commission</span>
+        <h2 style="color: var(--color-pure-white); margin-bottom: 1.5rem;">Have an Ambitious Project in Mind?</h2>
+        <p style="color: rgba(255,255,255,0.75); font-size: 1.125rem; line-height: 1.7; margin-bottom: 2.5rem;">
+          Whether building from virgin ground or reimagining an existing luxury residence, our Salem studio is ready to collaborate.
+        </p>
+        <a href="404.html" class="btn btn-primary btn-lg">
+          <span>Connect With Our Principals</span>
+          <span class="btn-icon">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1.5rem;" aria-label="STACKLY Home">
+            <img src="assets/Logo11.webp" alt="STACKLY Architecture & Interiors" class="brand-logo-img" />
+          </a>
+          <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9375rem; max-width: 320px; line-height: 1.7; margin-bottom: 1.5rem;">
+            An international architecture and interior design atelier headquartered in Salem. Sculpting light, structural cantilever volumes, and sensory material landscapes.
+          </p>
+          <div style="display: flex; gap: 0.85rem; align-items: center;">
+            <a href="404.html" aria-label="Instagram" class="footer-social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="404.html" aria-label="LinkedIn" class="footer-social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="404.html" aria-label="Twitter / X" class="footer-social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+            </a>
+            <a href="404.html" aria-label="Pinterest" class="footer-social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.15 2.52 7.7 6.13 9.17-.08-.78-.15-1.98.03-2.83.17-.74 1.09-4.63 1.09-4.63s-.28-.56-.28-1.39c0-1.3.75-2.27 1.69-2.27.8 0 1.18.6 1.18 1.32 0 .8-.51 2.01-.78 3.12-.22.93.46 1.69 1.37 1.69 1.65 0 2.92-1.74 2.92-4.25 0-2.22-1.6-3.77-3.87-3.77-2.64 0-4.19 1.98-4.19 4.02 0 .8.31 1.65.69 2.12.08.09.09.18.06.3-.07.29-.23.93-.26 1.06-.04.18-.14.22-.33.13-1.23-.57-2-2.37-2-3.82 0-3.11 2.26-5.97 6.52-5.97 3.42 0 6.08 2.44 6.08 5.7 0 3.4-2.14 6.13-5.12 6.13-1 0-1.94-.52-2.26-1.13l-.62 2.36c-.22.86-.83 1.94-1.24 2.6 1.13.35 2.34.54 3.59.54 5.52 0 10-4.48 10-10S17.52 2 12 2z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Explore</h4>
+          <ul class="footer-links-list">
+            <li><a href="404.html">Featured Projects</a></li>
+            <li><a href="404.html">Architecture Practice</a></li>
+            <li><a href="404.html">Interior Design Atelier</a></li>
+            <li><a href="404.html">Our 6-Step Process</a></li>
+            <li><a href="404.html">Studio Command Center</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Salem Studio</h4>
+          <div style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.9375rem; color: rgba(255,255,255,0.75);">
+            <div>
+              <strong style="color: var(--color-pure-white); display: block;">Address</strong>
+              142 Washington Street, Suite 400<br>Historic District, Salem, MA 01970
+            </div>
+            <div>
+              <strong style="color: var(--color-pure-white); display: block;">Direct Inquiries</strong>
+              <a href="mailto:salem@stackly-studio.com" style="color: var(--color-red-primary);">salem@stackly-studio.com</a><br>
+              +1 (978) 745-8800
+            </div>
+            <div>
+              <strong style="color: var(--color-pure-white); display: block;">Studio Hours</strong>
+              Monday – Friday: 08:30 – 18:00 EST<br>
+              Saturday: By Appointment Only
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © 2026 STACKLY Architecture & Interior Design. All rights reserved.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="404.html">Confidentiality Protocol</a>
+          <a href="404.html">Terms of Practice</a>
+          <a href="404.html">Architectural Licensing</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Motion & Animation System -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/motion.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

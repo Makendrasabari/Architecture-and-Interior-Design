@@ -1,0 +1,62 @@
+:root {
+  /* Architectural Color System (White + Red + Deep Charcoal) */
+  --color-pure-white: #ffffff;
+  --color-soft-white: #fbfbfb;
+  --color-off-white: #f1f1f4;
+  --color-surface-card: #ffffff;
+  --color-surface-hover: #f7f7fa;
+
+  --color-charcoal-muted: #64646b;
+  --color-charcoal-mid: #27272a;
+  --color-charcoal-deep: #141416;
+  --color-near-black: #0a0a0c;
+
+  /* Red Palette & Gradient */
+  --color-red-primary: #d92638;
+  --color-red-deep: #8b0e1e;
+  --color-red-wine: #610913;
+  --color-red-glow: rgba(217, 38, 56, 0.25);
+  --color-red-subtle: rgba(217, 38, 56, 0.08);
+
+  /* Primary Accent Gradient */
+  --gradient-red-primary: linear-gradient(135deg, #d92638 0%, #8b0e1e 100%);
+  --gradient-red-hover: linear-gradient(135deg, #e43345 0%, #a11224 100%);
+  --gradient-red-dark: linear-gradient(135deg, #8b0e1e 0%, #47060d 100%);
+  --gradient-card-border: linear-gradient(135deg, rgba(217, 38, 56, 0.3) 0%, rgba(20, 20, 22, 0.06) 100%);
+
+  /* Borders & Dividers */
+  --border-hairline: 1px solid rgba(20, 20, 22, 0.08);
+  --border-strong: 1px solid rgba(20, 20, 22, 0.16);
+  --border-red: 1px solid rgba(217, 38, 56, 0.4);
+  --border-red-solid: 1px solid var(--color-red-primary);
+  --border-dark-hairline: 1px solid rgba(255, 255, 255, 0.1);
+
+  /* Typography */
+  --font-editorial: 'Syne', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+
+  /* Spacing */
+  --container-max-width: 1440px;
+  --container-dashboard-width: 1680px;
+  --container-gutter: clamp(1.25rem, 4vw, 4rem);
+
+  /* Shadows */
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.04);
+  --shadow-elevated: 0 12px 35px rgba(0, 0, 0, 0.07);
+  --shadow-red-cta: 0 10px 30px rgba(217, 38, 56, 0.3);
+  --shadow-red-hover: 0 16px 40px rgba(217, 38, 56, 0.45);
+
+  /* Radii */
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 9999px;
+
+  /* Motion */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-medium: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}

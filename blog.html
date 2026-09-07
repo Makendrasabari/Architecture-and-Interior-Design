@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
+    try {
+      if (sessionStorage.getItem('stackly_returning_from_404') === 'true' && sessionStorage.getItem('stackly_saved_scroll')) {
+        var _savedY = parseInt(sessionStorage.getItem('stackly_saved_scroll'), 10);
+        if (!isNaN(_savedY)) { window.scrollTo(0, _savedY); }
+      } else {
+        window.scrollTo(0, 0);
+      }
+    } catch (e) { window.scrollTo(0, 0); }
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Design Monograph — STACKLY Architecture & Interior Design</title>
+  <meta name="description" content="Explore architectural essays, structural analyses, material case studies, and sustainable research published by STACKLY Salem Atelier." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/Logo11.webp" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Pure CSS Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/motion.css" />
+</head>
+<body class="theme-light">
+  <!-- Custom Cursor -->
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring">
+      <span class="cursor-text">EXPLORE</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-navbar nav-dark nav-transparent" id="site-header">
+    <div class="navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="STACKLY Home">
+        <img src="assets/Logo11.webp" alt="STACKLY Architecture & Interiors" class="brand-logo-img" />
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="blog.html" class="nav-link active">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar-actions">
+        <a href="login.html" class="btn btn-primary btn-sm">
+          <span>Login</span>
+          <span class="btn-icon">→</span>
+        </a>
+
+        <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="STACKLY Home">
+        <img src="assets/Logo11.webp" alt="STACKLY Architecture & Interiors" class="brand-logo-img" style="height: 38px; width: auto;" />
+      </a>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="blog.html" class="mobile-nav-link active">Blog</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-actions">
+      <a href="login.html" class="btn btn-primary" style="width: 100%; max-width: 240px; justify-content: center;">
+        <span>Login</span>
+        <span class="btn-icon">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="page-view blog-page">
+    <!-- Blog Hero -->
+    <section class="page-hero">
+      <img 
+        src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=2000&q=85" 
+        alt="Architectural Essays & Research" 
+        class="page-hero-bg"
+      />
+      <div class="page-hero-overlay"></div>
+      <div class="container page-hero-content">
+        <span class="eyebrow" data-anim="text-reveal">Monograph & Perspectives</span>
+        <h1 data-anim="text-reveal" class="page-hero-title">
+          <span class="hero-title-main">Architectural Essays,</span>
+          <span class="hero-title-accent">Spatial Research & Studies.</span>
+        </h1>
+        <p data-anim="text-reveal">
+          Rigorous analysis on structural daring, material ethics, and the evolution of international luxury architecture.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Blog Layout -->
+    <section style="padding: 4.5rem 0 7rem; background: var(--color-soft-white);">
+      <div class="container">
+        <!-- Filter and Search Bar -->
+        <div class="blog-filters-bar">
+          <div class="blog-categories" id="blog-cat-filters">
+            <button class="blog-filter-btn active" data-cat="All">All</button>
+            <button class="blog-filter-btn" data-cat="Architecture">Architecture</button>
+            <button class="blog-filter-btn" data-cat="Interior Design">Interior Design</button>
+            <button class="blog-filter-btn" data-cat="Materials">Materials</button>
+            <button class="blog-filter-btn" data-cat="Sustainability">Sustainability</button>
+            <button class="blog-filter-btn" data-cat="Design Trends">Design Trends</button>
+            <button class="blog-filter-btn" data-cat="Case Studies">Case Studies</button>
+          </div>
+
+          <div class="blog-search-box">
+            <span class="blog-search-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            <input 
+              type="text" 
+              id="blog-search-input" 
+              class="blog-search-input" 
+              placeholder="Search articles & case studies..." 
+            />
+          </div>
+        </div>
+
+        <!-- Featured Article Hero -->
+        <div class="featured-article-card" id="featured-article" data-article-id="cantilever-engineering-minimalism">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" alt="Featured Monograph" class="featured-article-img" />
+          <div class="featured-article-content">
+            <div style="display: flex; gap: 0.75rem; align-items: center; margin-bottom: 1rem;">
+              <span class="badge badge-red-solid">Featured Monograph</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-charcoal-muted);">Sep 2026 • 6 min read</span>
+            </div>
+            <h2 style="font-size: clamp(1.75rem, 3vw, 2.35rem); line-height: 1.25; margin-bottom: 1.25rem;">The Poetics of the Cantilever: Structural Drama in Modern Residences</h2>
+            <p style="font-size: 1rem; color: var(--color-charcoal-muted); line-height: 1.7; margin-bottom: 2rem;">How post-tensioned architectural concrete and concealed steel outriggers allow luxury structures to float effortlessly over natural landscapes.</p>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-family: var(--font-mono); font-size: 0.8125rem; font-weight: 600; color: var(--color-charcoal-deep);">Marcus Vance, Lead Principal</span>
+              <span class="btn btn-secondary btn-sm">
+                <span>Read Full Essay</span>
+                <span class="btn-icon">→</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Articles Grid -->
+        <div class="blog-grid" id="blog-articles-grid">
+          <!-- Populated and filtered dynamically by js/blog.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION 1: Architectural Documentaries & Films Series -->
+    <section style="padding: 6rem 0; background: var(--color-near-black); color: var(--color-pure-white); overflow: hidden;" class="films-series-section">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3.5rem; flex-wrap: wrap; gap: 1.5rem;">
+          <div>
+            <span class="eyebrow" style="color: var(--color-red-primary);">Cinema &amp; Motion</span>
+            <h2 style="color: var(--color-pure-white); font-size: 2.2rem;">Architectural Documentaries &amp; Films</h2>
+          </div>
+          <p style="max-width: 460px; color: rgba(255, 255, 255, 0.7); font-size: 0.9375rem; line-height: 1.6;">
+            High-definition site studies, engineering load tests, and light progression films produced by STACKLY Atelier.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;" data-anim="3card-shuffle">
+          <!-- Video Card 1 -->
+          <article style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); overflow: hidden; transition: transform 0.3s ease, border-color 0.3s ease;" onmouseenter="this.style.transform='translateY(-6px)';this.style.borderColor='rgba(217,38,56,0.5)'" onmouseleave="this.style.transform='translateY(0)';this.style.borderColor='rgba(255,255,255,0.1)'">
+            <div style="position: relative; aspect-ratio: 16/9; overflow: hidden; background: #000;">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Sculpting Cantilevers" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.85; transition: transform 0.5s ease;" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'" />
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,12,0.85) 0%, transparent 60%);"></div>
+              <div style="position: absolute; top: 1rem; right: 1rem; background: rgba(10,10,12,0.75); backdrop-filter: blur(4px); padding: 0.25rem 0.65rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: #fff; border: 1px solid rgba(255,255,255,0.2);">12 MIN 4K</div>
+              <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+                <div style="width: 54px; height: 54px; border-radius: 50%; background: var(--gradient-red-primary); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px var(--color-red-glow); color: #fff;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-left: 3px;"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                </div>
+              </div>
+            </div>
+            <div style="padding: 1.75rem;">
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem;">Structural Documentary</span>
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.35;">Sculpting Cantilevers: The Amalfi Coast Engineering Story</h3>
+              <p style="font-size: 0.875rem; color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 1.25rem;">A 12-minute deep dive into how post-tensioned steel tendons suspend Villa Aurelia over Mediterranean cliffside terrain.</p>
+              <a href="contact.html" style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: inline-flex; align-items: center; gap: 0.4rem;">Watch Documentary</a>
+            </div>
+          </article>
+
+          <!-- Video Card 2 -->
+          <article style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); overflow: hidden; transition: transform 0.3s ease, border-color 0.3s ease;" onmouseenter="this.style.transform='translateY(-6px)';this.style.borderColor='rgba(217,38,56,0.5)'" onmouseleave="this.style.transform='translateY(0)';this.style.borderColor='rgba(255,255,255,0.1)'">
+            <div style="position: relative; aspect-ratio: 16/9; overflow: hidden; background: #000;">
+              <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=800&q=80" alt="Material Masterclass" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.85; transition: transform 0.5s ease;" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'" />
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,12,0.85) 0%, transparent 60%);"></div>
+              <div style="position: absolute; top: 1rem; right: 1rem; background: rgba(10,10,12,0.75); backdrop-filter: blur(4px); padding: 0.25rem 0.65rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: #fff; border: 1px solid rgba(255,255,255,0.2);">8 MIN 4K</div>
+              <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+                <div style="width: 54px; height: 54px; border-radius: 50%; background: var(--gradient-red-primary); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px var(--color-red-glow); color: #fff;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-left: 3px;"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                </div>
+              </div>
+            </div>
+            <div style="padding: 1.75rem;">
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem;">Material Craftsmanship</span>
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.35;">Venetian Stucco &amp; Raw Obsidian Formwork</h3>
+              <p style="font-size: 0.875rem; color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 1.25rem;">Master craftsmen demonstrate hand-troweled lime plasters and bespoke obsidian concrete casting processes.</p>
+              <a href="contact.html" style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: inline-flex; align-items: center; gap: 0.4rem;">Watch Masterclass</a>
+            </div>
+          </article>
+
+          <!-- Video Card 3 -->
+          <article style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); overflow: hidden; transition: transform 0.3s ease, border-color 0.3s ease;" onmouseenter="this.style.transform='translateY(-6px)';this.style.borderColor='rgba(217,38,56,0.5)'" onmouseleave="this.style.transform='translateY(0)';this.style.borderColor='rgba(255,255,255,0.1)'">
+            <div style="position: relative; aspect-ratio: 16/9; overflow: hidden; background: #000;">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Spatial Light Progression" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.85; transition: transform 0.5s ease;" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'" />
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,12,0.85) 0%, transparent 60%);"></div>
+              <div style="position: absolute; top: 1rem; right: 1rem; background: rgba(10,10,12,0.75); backdrop-filter: blur(4px); padding: 0.25rem 0.65rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: #fff; border: 1px solid rgba(255,255,255,0.2);">5 MIN 4K</div>
+              <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+                <div style="width: 54px; height: 54px; border-radius: 50%; background: var(--gradient-red-primary); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px var(--color-red-glow); color: #fff;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-left: 3px;"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                </div>
+              </div>
+            </div>
+            <div style="padding: 1.75rem;">
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem;">Spatial Light Study</span>
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.35;">Light &amp; Shadow: 24 Hours Inside Kyoto Court</h3>
+              <p style="font-size: 0.875rem; color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 1.25rem;">A 4K time-lapse capturing solar geometry, slatted shoji shadows, and seasonal ambient reflections.</p>
+              <a href="contact.html" style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: inline-flex; align-items: center; gap: 0.4rem;">Watch Light Study</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Architectural Research Monograph Series -->
+    <section style="padding: 6rem 0; background: var(--color-pure-white); border-top: 1px solid rgba(20,20,22,0.08); overflow: hidden;" class="monographs-section">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3.5rem; flex-wrap: wrap; gap: 1.5rem;">
+          <div>
+            <span class="eyebrow">Academic Research</span>
+            <h2>Atelier Monograph Series</h2>
+          </div>
+          <p style="max-width: 440px; color: var(--color-charcoal-muted); font-size: 0.9375rem; line-height: 1.6;">
+            Deep-dive technical whitepapers published quarterly by STACKLY Salem Atelier principals.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;" data-anim="3card-shuffle">
+          <div style="background: var(--color-off-white); border-radius: var(--radius-sm); padding: 2.25rem; border: 1px solid rgba(20,20,22,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+                <span class="badge badge-red">Vol. 14</span>
+                <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-charcoal-muted);">Structural Engineering</span>
+              </div>
+              <h3 style="font-size: 1.35rem; margin-bottom: 0.85rem; line-height: 1.35;">Post-Tensioned Concrete Envelopes in Saline Coastal Climates</h3>
+              <p style="font-size: 0.9375rem; color: var(--color-charcoal-muted); line-height: 1.65; margin-bottom: 1.5rem;">
+                Analyzing 15-year micro-crack performance and hydrophobic silane sealants on long-span cantilevered residential slabs.
+              </p>
+            </div>
+            <a href="404.html" class="btn btn-secondary btn-sm" style="align-self: flex-start;">
+              <span>Request Paper PDF</span>
+              <span class="btn-icon">→</span>
+            </a>
+          </div>
+
+          <div style="background: var(--color-off-white); border-radius: var(--radius-sm); padding: 2.25rem; border: 1px solid rgba(20,20,22,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+                <span class="badge badge-red">Vol. 15</span>
+                <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-charcoal-muted);">Spatial Acoustics</span>
+              </div>
+              <h3 style="font-size: 1.35rem; margin-bottom: 0.85rem; line-height: 1.35;">Acoustic Attenuation in Double-Height Minimalist Great Rooms</h3>
+              <p style="font-size: 0.9375rem; color: var(--color-charcoal-muted); line-height: 1.65; margin-bottom: 1.5rem;">
+                Concealed acoustic plaster membranes and micro-perforated timber joinery strategies for reverberation time management.
+              </p>
+            </div>
+            <a href="404.html" class="btn btn-secondary btn-sm" style="align-self: flex-start;">
+              <span>Request Paper PDF</span>
+              <span class="btn-icon">→</span>
+            </a>
+          </div>
+
+          <div style="background: var(--color-off-white); border-radius: var(--radius-sm); padding: 2.25rem; border: 1px solid rgba(20,20,22,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+                <span class="badge badge-red">Vol. 16</span>
+                <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-charcoal-muted);">Facade Physics</span>
+              </div>
+              <h3 style="font-size: 1.35rem; margin-bottom: 0.85rem; line-height: 1.35;">The Passive Glazing Manifesto: Triple-Glazed Thermally Broken Envelopes</h3>
+              <p style="font-size: 0.9375rem; color: var(--color-charcoal-muted); line-height: 1.65; margin-bottom: 1.5rem;">
+                Balancing 95% solar light transmittance with ultra-low U-values in extreme temperature mountain environments.
+              </p>
+            </div>
+            <a href="404.html" class="btn btn-secondary btn-sm" style="align-self: flex-start;">
+              <span>Request Paper PDF</span>
+              <span class="btn-icon">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION 3: Editorial Authors & Monograph Contributors -->
+    <section style="padding: 6rem 0; background: var(--color-soft-white); border-top: 1px solid rgba(20,20,22,0.08);">
+      <div class="container">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 4rem;">
+          <span class="eyebrow">Thought Leadership</span>
+          <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">Monograph Editors &amp; Lead Authors</h2>
+          <p style="color: var(--color-charcoal-muted); font-size: 1rem; line-height: 1.65;">
+            Our published monographs are authored by STACKLY practicing architects, computational structural engineers, and interior design principals.
+          </p>
+        </div>
+      </div>
+
+      <div class="horizontal-running-marquee authors-marquee">
+        <div class="horizontal-running-track authors-track">
+          <!-- Continuous Set 1 -->
+          <!-- Card 1 -->
+          <div class="author-card" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Marcus Vance" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Marcus Vance</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Principal Architect</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">Author of 14 cantilever &amp; structural concrete monographs. RIBA Gold Medalist nominee.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">14 Published Essays</span>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="author-card" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Elena Rostova" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Elena Rostova</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Interior Principal</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">Milan Master of Design. Specialist in sensory acoustics, raw stone joinery &amp; lighting physics.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">9 Published Essays</span>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="author-card" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Dr. Aris Thorne" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Dr. Aris Thorne</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Chief Structural Engineer</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">MIT PhD in Parametric FEA Analysis. Computational facade dynamics and seismic damping expert.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">11 Published Essays</span>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="author-card" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80" alt="Chiara Lombardi" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Chiara Lombardi</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Bioclimatic Architect</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">Specialist in net-zero geothermal envelopes, solar geometry, and indigenous flora integration.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">7 Published Essays</span>
+          </div>
+
+          <!-- Continuous Set 1 Repeat 2 -->
+          <div class="author-card" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Marcus Vance" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Marcus Vance</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Principal Architect</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">Author of 14 cantilever &amp; structural concrete monographs. RIBA Gold Medalist nominee.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">14 Published Essays</span>
+          </div>
+
+          <div class="author-card" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Elena Rostova" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Elena Rostova</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Interior Principal</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">Milan Master of Design. Specialist in sensory acoustics, raw stone joinery &amp; lighting physics.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">9 Published Essays</span>
+          </div>
+
+          <div class="author-card" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Dr. Aris Thorne" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Dr. Aris Thorne</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Chief Structural Engineer</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">MIT PhD in Parametric FEA Analysis. Computational facade dynamics and seismic damping expert.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">11 Published Essays</span>
+          </div>
+
+          <div class="author-card" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80" alt="Chiara Lombardi" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Chiara Lombardi</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Bioclimatic Architect</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">Specialist in net-zero geothermal envelopes, solar geometry, and indigenous flora integration.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">7 Published Essays</span>
+          </div>
+
+          <!-- Continuous Set 1 Repeat 3 -->
+          <div class="author-card" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Marcus Vance" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Marcus Vance</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Principal Architect</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">Author of 14 cantilever &amp; structural concrete monographs. RIBA Gold Medalist nominee.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">14 Published Essays</span>
+          </div>
+
+          <div class="author-card" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Elena Rostova" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Elena Rostova</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Interior Principal</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">Milan Master of Design. Specialist in sensory acoustics, raw stone joinery &amp; lighting physics.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">9 Published Essays</span>
+          </div>
+
+          <div class="author-card" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Dr. Aris Thorne" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Dr. Aris Thorne</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Chief Structural Engineer</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">MIT PhD in Parametric FEA Analysis. Computational facade dynamics and seismic damping expert.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">11 Published Essays</span>
+          </div>
+
+          <div class="author-card" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80" alt="Chiara Lombardi" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Chiara Lombardi</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Bioclimatic Architect</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">Specialist in net-zero geothermal envelopes, solar geometry, and indigenous flora integration.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">7 Published Essays</span>
+          </div>
+
+          <!-- Seamless Loop Set 2 (Identical Clone for 100% Continuous Flow) -->
+          <!-- Card 1 Clone -->
+          <div class="author-card" aria-hidden="true" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Marcus Vance" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Marcus Vance</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Principal Architect</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">Author of 14 cantilever &amp; structural concrete monographs. RIBA Gold Medalist nominee.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">14 Published Essays</span>
+          </div>
+
+          <!-- Card 2 Clone -->
+          <div class="author-card" aria-hidden="true" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Elena Rostova" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Elena Rostova</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Interior Principal</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">Milan Master of Design. Specialist in sensory acoustics, raw stone joinery &amp; lighting physics.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">9 Published Essays</span>
+          </div>
+
+          <!-- Card 3 Clone -->
+          <div class="author-card" aria-hidden="true" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Dr. Aris Thorne" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Dr. Aris Thorne</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Chief Structural Engineer</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">MIT PhD in Parametric FEA Analysis. Computational facade dynamics and seismic damping expert.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">11 Published Essays</span>
+          </div>
+
+          <!-- Card 4 Clone -->
+          <div class="author-card" aria-hidden="true" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80" alt="Chiara Lombardi" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Chiara Lombardi</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Bioclimatic Architect</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">Specialist in net-zero geothermal envelopes, solar geometry, and indigenous flora integration.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">7 Published Essays</span>
+          </div>
+
+          <!-- Set 2 Repeat 2 -->
+          <div class="author-card" aria-hidden="true" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Marcus Vance" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Marcus Vance</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Principal Architect</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">Author of 14 cantilever &amp; structural concrete monographs. RIBA Gold Medalist nominee.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">14 Published Essays</span>
+          </div>
+
+          <div class="author-card" aria-hidden="true" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Elena Rostova" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Elena Rostova</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Interior Principal</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">Milan Master of Design. Specialist in sensory acoustics, raw stone joinery &amp; lighting physics.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">9 Published Essays</span>
+          </div>
+
+          <div class="author-card" aria-hidden="true" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Dr. Aris Thorne" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Dr. Aris Thorne</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Chief Structural Engineer</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">MIT PhD in Parametric FEA Analysis. Computational facade dynamics and seismic damping expert.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">11 Published Essays</span>
+          </div>
+
+          <div class="author-card" aria-hidden="true" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80" alt="Chiara Lombardi" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Chiara Lombardi</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Bioclimatic Architect</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">Specialist in net-zero geothermal envelopes, solar geometry, and indigenous flora integration.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">7 Published Essays</span>
+          </div>
+
+          <!-- Set 2 Repeat 3 -->
+          <div class="author-card" aria-hidden="true" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Marcus Vance" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Marcus Vance</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Principal Architect</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">Author of 14 cantilever &amp; structural concrete monographs. RIBA Gold Medalist nominee.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">14 Published Essays</span>
+          </div>
+
+          <div class="author-card" aria-hidden="true" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Elena Rostova" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Elena Rostova</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Interior Principal</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">Milan Master of Design. Specialist in sensory acoustics, raw stone joinery &amp; lighting physics.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">9 Published Essays</span>
+          </div>
+
+          <div class="author-card" aria-hidden="true" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Dr. Aris Thorne" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Dr. Aris Thorne</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Chief Structural Engineer</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">MIT PhD in Parametric FEA Analysis. Computational facade dynamics and seismic damping expert.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">11 Published Essays</span>
+          </div>
+
+          <div class="author-card" aria-hidden="true" style="background: var(--color-pure-white); border-radius: var(--radius-sm); padding: 2rem; border: 1px solid rgba(20,20,22,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: transform 0.3s ease;">
+            <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.25rem; border: 2px solid var(--color-red-primary); box-shadow: 0 4px 14px var(--color-red-glow);">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80" alt="Chiara Lombardi" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Chiara Lombardi</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-red-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.85rem;">Bioclimatic Architect</span>
+            <p style="font-size: 0.875rem; color: var(--color-charcoal-muted); line-height: 1.6; margin-bottom: 1.25rem;">Specialist in net-zero geothermal envelopes, solar geometry, and indigenous flora integration.</p>
+            <span class="badge badge-outline" style="font-size: 0.75rem;">7 Published Essays</span>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION 4: Research Monograph Journal Subscription Banner -->
+    <section style="padding: 6rem 0; background: var(--color-near-black); color: var(--color-pure-white);">
+      <div class="container">
+        <div class="monograph-subscribe-box" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-sm); padding: clamp(2.5rem, 5vw, 4.5rem); display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: center;">
+          <div>
+            <span class="eyebrow" style="color: var(--color-red-primary);">Quarterly Monograph Journal</span>
+            <h2 style="color: var(--color-pure-white); font-size: clamp(1.85rem, 3vw, 2.5rem); margin-bottom: 1rem;">
+              Subscribe To STACKLY Monograph Research
+            </h2>
+            <p style="color: rgba(255,255,255,0.75); font-size: 1.0625rem; line-height: 1.7;">
+              Join 15,000+ architects, structural engineers, and design visionaries receiving our quarterly printed & digital monograph publications.
+            </p>
+          </div>
+
+          <div>
+            <form id="blog-subscribe-form" novalidate style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <input 
+                  type="email" 
+                  id="blog-subscribe-email"
+                  placeholder="Enter your professional email address..." 
+                  required 
+                  style="flex: 1; min-width: 240px; padding: 0.9rem 1.25rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-sm); color: #ffffff; font-size: 0.9375rem; transition: border-color 0.2s;" 
+                />
+                <button type="submit" id="blog-subscribe-btn" class="btn btn-primary" style="white-space: nowrap;">
+                  <span>Subscribe</span>
+                  <span class="btn-icon">→</span>
+                </button>
+              </div>
+              <div id="sub-error-wrapper" style="display: none; margin-top: 0.35rem;">
+                <div style="height: 2px; width: 100%; background: #ef4444; margin-bottom: 0.4rem; border-radius: 2px;"></div>
+                <p id="sub-error" style="color: #ef4444; font-size: 0.875rem; font-family: var(--font-mono); margin: 0; line-height: 1.4;">
+                  Please enter email
+                </p>
+              </div>
+              <p id="sub-success" style="display: none; color: #4ade80; font-size: 0.875rem; font-family: var(--font-mono); margin-top: 0.5rem;">
+                Subscribed successfully. Welcome to STACKLY Quarterly Monograph.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Reader Modal Container -->
+    <div class="modal-overlay" id="article-reader-modal" aria-hidden="true">
+      <div class="modal-card" id="article-modal-content"></div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1.5rem;" aria-label="STACKLY Home">
+            <img src="assets/Logo11.webp" alt="STACKLY Architecture & Interiors" class="brand-logo-img" />
+          </a>
+          <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9375rem; max-width: 320px; line-height: 1.7; margin-bottom: 1.5rem;">
+            An international architecture and interior design atelier headquartered in Salem. Sculpting light, structural cantilever volumes, and sensory material landscapes.
+          </p>
+          <div style="display: flex; gap: 0.85rem; align-items: center;">
+            <a href="404.html" aria-label="Instagram" class="footer-social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="404.html" aria-label="LinkedIn" class="footer-social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="404.html" aria-label="Twitter / X" class="footer-social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+            </a>
+            <a href="404.html" aria-label="Pinterest" class="footer-social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.15 2.52 7.7 6.13 9.17-.08-.78-.15-1.98.03-2.83.17-.74 1.09-4.63 1.09-4.63s-.28-.56-.28-1.39c0-1.3.75-2.27 1.69-2.27.8 0 1.18.6 1.18 1.32 0 .8-.51 2.01-.78 3.12-.22.93.46 1.69 1.37 1.69 1.65 0 2.92-1.74 2.92-4.25 0-2.22-1.6-3.77-3.87-3.77-2.64 0-4.19 1.98-4.19 4.02 0 .8.31 1.65.69 2.12.08.09.09.18.06.3-.07.29-.23.93-.26 1.06-.04.18-.14.22-.33.13-1.23-.57-2-2.37-2-3.82 0-3.11 2.26-5.97 6.52-5.97 3.42 0 6.08 2.44 6.08 5.7 0 3.4-2.14 6.13-5.12 6.13-1 0-1.94-.52-2.26-1.13l-.62 2.36c-.22.86-.83 1.94-1.24 2.6 1.13.35 2.34.54 3.59.54 5.52 0 10-4.48 10-10S17.52 2 12 2z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Explore</h4>
+          <ul class="footer-links-list">
+            <li><a href="404.html">Featured Projects</a></li>
+            <li><a href="404.html">Architecture Practice</a></li>
+            <li><a href="404.html">Interior Design Atelier</a></li>
+            <li><a href="404.html">Our 6-Step Process</a></li>
+            <li><a href="404.html">Studio Command Center</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Salem Studio</h4>
+          <div style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.9375rem; color: rgba(255,255,255,0.75);">
+            <div>
+              <strong style="color: var(--color-pure-white); display: block;">Address</strong>
+              142 Washington Street, Suite 400<br>Historic District, Salem, MA 01970
+            </div>
+            <div>
+              <strong style="color: var(--color-pure-white); display: block;">Direct Inquiries</strong>
+              <a href="mailto:salem@stackly-studio.com" style="color: var(--color-red-primary);">salem@stackly-studio.com</a><br>
+              +1 (978) 745-8800
+            </div>
+            <div>
+              <strong style="color: var(--color-pure-white); display: block;">Studio Hours</strong>
+              Monday – Friday: 08:30 – 18:00 EST<br>
+              Saturday: By Appointment Only
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © 2026 STACKLY Architecture & Interior Design. All rights reserved.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="404.html">Confidentiality Protocol</a>
+          <a href="404.html">Terms of Practice</a>
+          <a href="404.html">Architectural Licensing</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Motion & Animation System -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/motion.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/blog.js"></script>
+</body>
+</html>
