@@ -555,9 +555,6 @@ function getProjectsHTML() {
           <span class="eyebrow">Studio Portfolio Directory</span>
           <h2 style="font-size: 2rem;">All Master Commissions</h2>
         </div>
-        <div style="display: flex; gap: 1rem;">
-          <input type="text" id="arch-proj-search" placeholder="Search projects or locations..." class="form-input" style="width: 260px; padding: 0.5rem 1rem;" />
-        </div>
       </div>
 
       <div class="projects-grid" id="arch-projects-grid" style="display: flex; flex-direction: column; gap: 1.5rem;">
@@ -646,11 +643,6 @@ function getFloorPlansHTML() {
           <p style="font-size: 0.9375rem; color: var(--color-charcoal-muted); margin-top: 0.25rem;">
             Scale: <strong>${fp.scale}</strong> • Area: <strong>${fp.totalSquareFootage}</strong> • <strong>${fp.orientation}</strong>
           </p>
-        </div>
-        <div style="display: flex; gap: 0.75rem;">
-          ${fp.zones.map(z => `
-            <span class="badge" style="background: ${z.color}; color: #fff;">${z.name}</span>
-          `).join('')}
         </div>
       </div>
 

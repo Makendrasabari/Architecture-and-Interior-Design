@@ -335,7 +335,7 @@
 
 .project-card {
   position: relative;
-  cursor: pointer;
+  cursor: default;
   border-radius: var(--radius-sm);
   overflow: hidden;
   background: var(--color-pure-white);

@@ -535,37 +535,8 @@ document.addEventListener('click', (e) => {
  * 6. Project Blueprint & Architectural Inspection Modal
  */
 function initProjectModals() {
-  // Global modal click delegate
-  document.addEventListener('click', (e) => {
-    // If clicking a link, button, or 404 trigger, do not open modal
-    const btn = e.target.closest('a, button, .btn');
-    const text = (e.target.textContent || '').toLowerCase().trim();
-    const btnText = btn ? (btn.textContent || '').toLowerCase().trim() : '';
-    if (
-      text.includes('explore') ||
-      text.includes('inquire') ||
-      text.includes('read full essay') ||
-      text.includes('read analysis') ||
-      btnText.includes('explore') ||
-      btnText.includes('inquire') ||
-      btnText.includes('read full essay') ||
-      btnText.includes('read analysis') ||
-      (btn && btn.getAttribute('href') === '404.html')
-    ) {
-      return;
-    }
-
-    const card = e.target.closest('.project-card, [data-project-id]');
-    if (!card) return;
-
-    const projectId = card.getAttribute('data-project-id');
-    if (!projectId || !window.STACKLY_DATA || !window.STACKLY_DATA.projects) return;
-
-    const project = window.STACKLY_DATA.projects.find((p) => p.id === projectId);
-    if (!project) return;
-
-    openProjectModal(project);
-  });
+  // Pop-up modal card functionality for project image cards on the home page disabled per user request
+  return;
 }
 
 function openProjectModal(p) {
