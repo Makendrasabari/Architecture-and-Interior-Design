@@ -136,13 +136,20 @@ function initContactForm() {
 }
 
 function initSalemMapInteractions() {
+  const mapSection = document.querySelector('.salem-map-section');
   const mapContainer = document.getElementById('salem-map');
-  if (!mapContainer) return;
+  if (!mapContainer && !mapSection) return;
 
-  mapContainer.style.cursor = 'pointer';
+  const targetElement = mapSection || mapContainer;
+  targetElement.style.cursor = 'pointer';
 
-  const studioPin = mapContainer.querySelector('#salem-pin-point');
-  if (studioPin) {
-    studioPin.style.cursor = 'pointer';
-  }
+  const googleMapsUrl = 'https://maps.google.com/?q=142+Washington+Street+Salem+MA+01970';
+
+  targetElement.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (link && link.getAttribute('href')) {
+      return; // allow default anchor navigation to Google Maps
+    }
+    window.open(googleMapsUrl, '_blank', 'noopener,noreferrer');
+  });
 }

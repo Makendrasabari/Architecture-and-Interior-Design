@@ -2144,11 +2144,13 @@
       const accentText = heroTitle.querySelector('.hero-title-accent');
 
       if (typeof gsap !== 'undefined') {
+        const isMobile = window.innerWidth < 768;
+        const xVal = isMobile ? 25 : 90;
         const tl = gsap.timeline();
 
         // 1. White text slides in from LEFT
         if (mainText) {
-          gsap.set(mainText, { x: -90, opacity: 0 });
+          gsap.set(mainText, { x: -xVal, opacity: 0 });
           tl.to(
             mainText,
             {
@@ -2167,7 +2169,7 @@
 
         // 2. Red text slides in from RIGHT
         if (accentText) {
-          gsap.set(accentText, { x: 90, opacity: 0 });
+          gsap.set(accentText, { x: xVal, opacity: 0 });
           tl.to(
             accentText,
             {

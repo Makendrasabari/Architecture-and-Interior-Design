@@ -243,12 +243,13 @@
             </div>
           </div>
 
-          <div class="salem-map-canvas-container" id="salem-map" style="position: relative; width: 100%; height: 460px;">
+          <div class="salem-map-canvas-container" id="salem-map" style="position: relative; width: 100%; height: 460px; cursor: pointer;">
+            <a href="https://maps.google.com/?q=142+Washington+Street+Salem+MA+01970" target="_blank" rel="noopener noreferrer" class="salem-map-overlay-link" aria-label="Open Google Maps Location" style="position: absolute; inset: 0; z-index: 2; display: block; text-decoration: none;"></a>
             <iframe 
               src="https://maps.google.com/maps?q=142%20Washington%20Street%2C%20Salem%2C%20MA%2001970&t=m&z=15&ie=UTF8&iwloc=&output=embed" 
               width="100%" 
               height="100%" 
-              style="border:0; width: 100%; height: 100%; display: block;" 
+              style="border:0; width: 100%; height: 100%; display: block; pointer-events: none;" 
               allowfullscreen="" 
               loading="lazy" 
               referrerpolicy="no-referrer-when-downgrade"
@@ -256,7 +257,7 @@
             </iframe>
 
             <!-- Studio Pin Float Card -->
-            <div class="salem-studio-pin-card">
+            <div class="salem-studio-pin-card" style="position: relative; z-index: 3;">
               <span class="badge badge-red-solid" style="margin-bottom: 0.5rem;">Headquarters</span>
               <h4 style="font-size: 1.15rem; margin-bottom: 0.25rem;">STACKLY Salem Atelier</h4>
               <p style="font-size: 0.8125rem; color: var(--color-charcoal-muted); line-height: 1.5; margin-bottom: 0.75rem;">
