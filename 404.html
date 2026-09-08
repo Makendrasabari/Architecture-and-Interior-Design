@@ -22,13 +22,7 @@
   <link rel="stylesheet" href="css/pages.css" />
 </head>
 <body class="theme-light" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: var(--color-soft-white);">
-  <!-- Custom Cursor -->
-  <div id="custom-cursor" class="custom-cursor" aria-hidden="true">
-    <div class="cursor-dot"></div>
-    <div class="cursor-ring">
-      <span class="cursor-text">404</span>
-    </div>
-  </div>
+
 
   <main style="width: 100%; display: flex; align-items: center; justify-content: center; padding: 3rem 1.5rem; text-align: center;">
     <div style="max-width: 650px;">
@@ -49,7 +43,7 @@
             <span>Back to Home</span>
             <span class="btn-icon">→</span>
           </a>
-          <button onclick="history.back()" class="btn btn-secondary btn-lg" type="button" style="cursor: pointer;">
+          <button onclick="if (history.length > 1) { history.back(); } else { window.location.href = sessionStorage.getItem('stackly_source_page') || 'index.html'; }" class="btn btn-secondary btn-lg" type="button" style="cursor: pointer;">
             <span>Go Back</span>
           </button>
         </div>

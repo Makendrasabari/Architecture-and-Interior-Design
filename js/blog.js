@@ -17,7 +17,8 @@ function initBlogFilters() {
   const searchInput = document.getElementById('blog-search-input');
 
   catButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
       catButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       currentCategory = btn.getAttribute('data-cat') || 'All';
@@ -31,6 +32,8 @@ function initBlogFilters() {
       renderFilteredPosts();
     });
   }
+
+  renderFilteredPosts();
 }
 
 function renderFilteredPosts() {

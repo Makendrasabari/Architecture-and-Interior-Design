@@ -8,6 +8,26 @@ if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
 
+
+
+// Global capture listener: save exact scroll position for any element navigating to 404
+window.addEventListener('click', (e) => {
+  const target = e.target.closest('a, button, .btn, [href]');
+  if (!target) return;
+
+  const href = target.getAttribute('href');
+  const is404Link = href === '404.html' || (href && href.includes('404.html'));
+
+  if (is404Link) {
+    const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+    try {
+      sessionStorage.setItem('stackly_saved_scroll', String(scrollY));
+      sessionStorage.setItem('stackly_returning_from_404', 'true');
+      sessionStorage.setItem('stackly_source_page', window.location.pathname);
+    } catch (err) {}
+  }
+}, true);
+
 // Reliable scroll restoration function for back-navigation from 404
 function restoreScrollPositionFrom404() {
   // 1. Force close any and all modals so they never restore
@@ -23,31 +43,27 @@ function restoreScrollPositionFrom404() {
     if (isReturning && savedScroll !== null) {
       const targetY = parseInt(savedScroll, 10);
       if (!isNaN(targetY)) {
-        // Immediate scroll restore
-        window.scrollTo({ top: targetY, left: 0, behavior: 'instant' });
-        document.documentElement.scrollTop = targetY;
-        document.body.scrollTop = targetY;
+        const applyScroll = () => {
+          window.scrollTo({ top: targetY, left: 0, behavior: 'instant' });
+          document.documentElement.scrollTop = targetY;
+          document.body.scrollTop = targetY;
+        };
 
-        // Perform micro-staggers to guarantee exact restoration after layout and fonts settle
-        requestAnimationFrame(() => {
-          window.scrollTo({ top: targetY, left: 0, behavior: 'instant' });
-          document.documentElement.scrollTop = targetY;
-          document.body.scrollTop = targetY;
-        });
+        applyScroll();
+
+        // Micro-staggers guarantee exact restoration as layout and webfonts render
+        requestAnimationFrame(applyScroll);
+        setTimeout(applyScroll, 30);
+        setTimeout(applyScroll, 100);
+        setTimeout(applyScroll, 250);
+        setTimeout(applyScroll, 500);
+
+        // Keep flags intact for 1500ms so DOMContentLoaded, pageshow, and load events do not trigger reset to 0
         setTimeout(() => {
-          window.scrollTo({ top: targetY, left: 0, behavior: 'instant' });
-          document.documentElement.scrollTop = targetY;
-          document.body.scrollTop = targetY;
-        }, 40);
-        setTimeout(() => {
-          window.scrollTo({ top: targetY, left: 0, behavior: 'instant' });
-          document.documentElement.scrollTop = targetY;
-          document.body.scrollTop = targetY;
-          // Clear flags after restoration completes
           sessionStorage.removeItem('stackly_returning_from_404');
           sessionStorage.removeItem('stackly_saved_scroll');
           sessionStorage.removeItem('stackly_source_page');
-        }, 140);
+        }, 1500);
         return true;
       }
     }
@@ -246,54 +262,7 @@ function initArchitecturalPreloader() {
  * 1. Architectural Custom Cursor
  */
 function initCursor() {
-  const cursor = document.getElementById('custom-cursor');
-  if (!cursor || window.matchMedia('(pointer: coarse)').matches) return;
-
-  const dot = cursor.querySelector('.cursor-dot');
-  const ring = cursor.querySelector('.cursor-ring');
-
-  let mouseX = window.innerWidth / 2;
-  let mouseY = window.innerHeight / 2;
-  let ringX = mouseX;
-  let ringY = mouseY;
-
-  window.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    if (dot) {
-      dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-    }
-  }, { passive: true });
-
-  function renderRing() {
-    ringX += (mouseX - ringX) * 0.15;
-    ringY += (mouseY - ringY) * 0.15;
-    if (ring) {
-      ring.style.transform = `translate(${ringX}px, ${ringY}px)`;
-    }
-    requestAnimationFrame(renderRing);
-  }
-  requestAnimationFrame(renderRing);
-
-  // Hover states on interactive elements
-  function attachHoverEvents() {
-    const interactiveElements = document.querySelectorAll('a, button, input, select, textarea, .blog-card, .service-card');
-    interactiveElements.forEach((el) => {
-      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-    });
-
-    const projectCards = document.querySelectorAll('.project-card, [data-cursor="project"]');
-    projectCards.forEach((card) => {
-      card.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover-project'));
-      card.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover-project'));
-    });
-  }
-
-  attachHoverEvents();
-  // Observe DOM additions for dynamic elements
-  const observer = new MutationObserver(() => attachHoverEvents());
-  observer.observe(document.body, { childList: true, subtree: true });
+  return;
 }
 
 /**
@@ -481,14 +450,26 @@ document.addEventListener('click', (e) => {
   const target = e.target.closest('button, .btn, a');
   if (!target) return;
 
-  // Preserve primary navigation links (Header menu, Footer main page links, Auth forms submit, Newsletter forms, Contact inquiry form)
-  const isPrimaryNav = target.closest('.navbar-menu, .mobile-drawer, .mobile-nav-drawer, .brand-logo, .auth-switch-link, .auth-back-link, #login-form, #signup-form, #contact-form, #contact-inquiry-form, #footer-newsletter-form, #blog-subscribe-form');
+  // Preserve primary navigation links & category filter buttons (Header menu, Footer main page links, Auth forms submit, Newsletter forms, Contact inquiry form, Blog category filters)
+  const isPrimaryNav = target.closest('.navbar-menu, .mobile-drawer, .mobile-nav-drawer, .brand-logo, .auth-switch-link, .auth-back-link, #login-form, #signup-form, #contact-form, #contact-inquiry-form, #footer-newsletter-form, #blog-subscribe-form, #blog-cat-filters, .blog-filter-btn');
   if (isPrimaryNav) return;
 
   const text = (target.textContent || '').trim().toLowerCase();
 
-  // Redirect specified CTA buttons across Home, About, Services, Blog, and Dashboards to 404 page
+  // Redirect specified CTA buttons, social media icons, footer email link & polygon play buttons across Home, About, Services, Blog, and Dashboards to 404 page
   if (
+    target.classList.contains('footer-social-link') ||
+    target.closest('.footer-social-link') ||
+    (target.getAttribute('href') && target.getAttribute('href').includes('mailto:')) ||
+    text.includes('salem@stackly-studio.com') ||
+    (target.getAttribute('aria-label') && target.getAttribute('aria-label').includes('Play')) ||
+    text.includes('watch documentary') ||
+    text.includes('watch masterclass') ||
+    text.includes('watch light study') ||
+    target.getAttribute('aria-label') === 'Instagram' ||
+    target.getAttribute('aria-label') === 'LinkedIn' ||
+    target.getAttribute('aria-label') === 'Twitter / X' ||
+    target.getAttribute('aria-label') === 'Pinterest' ||
     text.includes('explore projects') ||
     text.includes('salem studio inquiries') ||
     text.includes('discover our story') ||
@@ -678,7 +659,7 @@ function openProjectModal(p) {
         <span>Inquire About Similar Typology</span>
         <span class="btn-icon">→</span>
       </a>
-      <a href="architecture-dashboard.html" class="btn btn-secondary">
+      <a href="404.html" class="btn btn-secondary">
         <span>Inspect in Architecture Command</span>
         <span class="btn-icon">→</span>
       </a>

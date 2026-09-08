@@ -48,89 +48,28 @@ function initContactForm() {
     messageInput.addEventListener('input', () => groupMessage.classList.remove('has-error'));
   }
 
+  const submitBtn = form.querySelector('button[type="submit"]');
+  if (submitBtn) {
+    submitBtn.addEventListener('click', () => {
+      const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+      try {
+        sessionStorage.setItem('stackly_saved_scroll', String(scrollY));
+        sessionStorage.setItem('stackly_returning_from_404', 'true');
+        sessionStorage.setItem('stackly_source_page', window.location.pathname);
+      } catch (err) {}
+    });
+  }
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    let isValid = true;
-    let firstInvalid = null;
+    const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+    try {
+      sessionStorage.setItem('stackly_saved_scroll', String(scrollY));
+      sessionStorage.setItem('stackly_returning_from_404', 'true');
+      sessionStorage.setItem('stackly_source_page', window.location.pathname);
+    } catch (err) {}
 
-    // Validate Name
-    if (!nameInput || !nameInput.value.trim()) {
-      if (groupName) groupName.classList.add('has-error');
-      isValid = false;
-      if (!firstInvalid && nameInput) firstInvalid = nameInput;
-    } else if (groupName) {
-      groupName.classList.remove('has-error');
-    }
-
-    // Validate Email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const emailVal = emailInput ? emailInput.value.trim() : '';
-    if (!emailVal) {
-      if (groupEmail) groupEmail.classList.add('has-error');
-      if (emailMsg) emailMsg.textContent = 'Please enter email';
-      isValid = false;
-      if (!firstInvalid && emailInput) firstInvalid = emailInput;
-    } else if (!emailRegex.test(emailVal)) {
-      if (groupEmail) groupEmail.classList.add('has-error');
-      if (emailMsg) emailMsg.textContent = 'Please enter a valid email';
-      isValid = false;
-      if (!firstInvalid && emailInput) firstInvalid = emailInput;
-    } else if (groupEmail) {
-      groupEmail.classList.remove('has-error');
-    }
-
-    // Validate Phone Number
-    const phoneVal = phoneInput ? phoneInput.value.trim() : '';
-    if (!phoneVal) {
-      if (groupPhone) groupPhone.classList.add('has-error');
-      isValid = false;
-      if (!firstInvalid && phoneInput) firstInvalid = phoneInput;
-    } else if (groupPhone) {
-      groupPhone.classList.remove('has-error');
-    }
-
-    // Validate Primary Discipline
-    const disciplineVal = disciplineInput ? disciplineInput.value.trim() : '';
-    if (!disciplineVal) {
-      if (groupDiscipline) groupDiscipline.classList.add('has-error');
-      isValid = false;
-      if (!firstInvalid && disciplineInput) firstInvalid = disciplineInput;
-    } else if (groupDiscipline) {
-      groupDiscipline.classList.remove('has-error');
-    }
-
-    // Validate Project Location & Budget
-    const locationVal = locationInput ? locationInput.value.trim() : '';
-    if (!locationVal) {
-      if (groupLocation) groupLocation.classList.add('has-error');
-      isValid = false;
-      if (!firstInvalid && locationInput) firstInvalid = locationInput;
-    } else if (groupLocation) {
-      groupLocation.classList.remove('has-error');
-    }
-
-    // Validate Project Vision & Timeline
-    const messageVal = messageInput ? messageInput.value.trim() : '';
-    if (!messageVal) {
-      if (groupMessage) groupMessage.classList.add('has-error');
-      isValid = false;
-      if (!firstInvalid && messageInput) firstInvalid = messageInput;
-    } else if (groupMessage) {
-      groupMessage.classList.remove('has-error');
-    }
-
-    const statusMsg = document.getElementById('contact-status-msg');
-    if (statusMsg) statusMsg.style.display = 'none';
-
-    if (!isValid) {
-      if (firstInvalid) {
-        firstInvalid.focus();
-      }
-      return;
-    }
-
-    // When all details are filled out, navigate to 404 page
     window.location.href = '404.html';
   });
 }
