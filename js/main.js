@@ -137,6 +137,10 @@ document.addEventListener('DOMContentLoaded', () => {
  * Premium Architectural Door-Opening Preloader
  */
 function initArchitecturalPreloader() {
+  if (window.location.pathname.includes('404.html') || document.title.includes('404') || !document.querySelector('link[href*="motion.css"]')) {
+    return;
+  }
+
   try {
     if (sessionStorage.getItem('stackly_returning_from_404') === 'true') {
       return;
@@ -696,6 +700,20 @@ function initFooterNewsletter() {
     const errorMsg = document.getElementById('sub-error');
     const successMsg = document.getElementById('sub-success');
 
+    const saveScrollState = () => {
+      const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+      try {
+        sessionStorage.setItem('stackly_saved_scroll', String(scrollY));
+        sessionStorage.setItem('stackly_returning_from_404', 'true');
+        sessionStorage.setItem('stackly_source_page', window.location.pathname);
+      } catch (err) {}
+    };
+
+    const submitBtn = document.getElementById('blog-subscribe-btn');
+    if (submitBtn) {
+      submitBtn.addEventListener('click', saveScrollState);
+    }
+
     if (emailInput) {
       emailInput.addEventListener('input', () => {
         if (errorWrapper) errorWrapper.style.display = 'none';
@@ -706,6 +724,8 @@ function initFooterNewsletter() {
 
     blogForm.addEventListener('submit', (e) => {
       e.preventDefault();
+
+      saveScrollState();
 
       const emailVal = emailInput ? emailInput.value.trim() : '';
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

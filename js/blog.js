@@ -246,6 +246,20 @@ function initBlogNewsletter() {
   const errorMsg = document.getElementById('sub-error');
   const successMsg = document.getElementById('sub-success');
 
+  const saveScrollState = () => {
+    const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+    try {
+      sessionStorage.setItem('stackly_saved_scroll', String(scrollY));
+      sessionStorage.setItem('stackly_returning_from_404', 'true');
+      sessionStorage.setItem('stackly_source_page', window.location.pathname);
+    } catch (err) {}
+  };
+
+  const submitBtn = document.getElementById('blog-subscribe-btn');
+  if (submitBtn) {
+    submitBtn.addEventListener('click', saveScrollState);
+  }
+
   if (emailInput) {
     emailInput.addEventListener('input', () => {
       if (errorWrapper) errorWrapper.style.display = 'none';
@@ -256,6 +270,8 @@ function initBlogNewsletter() {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    saveScrollState();
 
     const emailVal = emailInput ? emailInput.value.trim() : '';
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

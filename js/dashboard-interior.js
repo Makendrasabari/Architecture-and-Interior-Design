@@ -222,6 +222,17 @@ function getOverviewHTML() {
 
   return `
     <div class="module-view module-overview">
+      <div class="welcome-note-card" style="background: linear-gradient(135deg, rgba(20, 20, 22, 0.03) 0%, rgba(217, 38, 56, 0.05) 100%); border: 1px solid rgba(20, 20, 22, 0.08); border-left: 4px solid var(--color-red-primary); border-radius: var(--radius-sm); padding: 1.5rem 1.75rem; margin-bottom: 2rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+          <span class="badge badge-red-solid" style="font-size: 0.7rem;">Studio Command</span>
+          <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-charcoal-muted);">Interior Atelier Portal</span>
+        </div>
+        <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-near-black);">Welcome to STACKLY Interior Design Atelier Command Center</h3>
+        <p style="font-size: 0.9375rem; color: var(--color-charcoal-muted); margin: 0; line-height: 1.6;">
+          Your dedicated atelier workspace for curating bespoke FF&E suites, managing tactile material libraries, organizing moodboards, and delivering design reports.
+        </p>
+      </div>
+
       <div style="margin-bottom: 2rem;">
         <span class="eyebrow">Tactile Curation Summary</span>
         <h2 style="font-size: 2rem;">Interior Design Atelier Operations</h2>
